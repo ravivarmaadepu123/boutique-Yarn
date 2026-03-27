@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Yarn - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body class="scrollbar client-dashboard">
+  <div class="cd-app">
+    <aside class="cd-sidebar" id="sidebar">
+      <div class="cd-brand">
+        <span class="cd-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2c-2.6 0-5 1.4-6.3 3.7l6.3 3.6 6.3-3.6C17 3.4 14.6 2 12 2Zm-7 6.6v5.1c0 2.6 1.4 5 3.7 6.3l3.3-6-7-5.4Zm14 0-7 5.4 3.3 6c2.3-1.3 3.7-3.7 3.7-6.3V8.6Z" />
+          </svg>
+        </span>
+        <div>
+          <p class="cd-brand-title">Boutique Yarn</p>
+          <p class="cd-brand-sub">Craft Supply Studio</p>
+        </div>
+      </div>
+
+      <div class="cd-nav" id="nav">
+        <button type="button" class="active" data-target="overview"><i class="fa-solid fa-gauge-high"></i><span>Admin Overview</span></button>
+        <button type="button" data-target="operations"><i class="fa-solid fa-sitemap"></i><span>Operations</span></button>
+        <button type="button" data-target="inventory"><i class="fa-solid fa-boxes-stacked"></i><span>Inventory</span></button>
+        <button type="button" data-target="team"><i class="fa-solid fa-people-group"></i><span>Team</span></button>
+        <button type="button" data-target="finance"><i class="fa-solid fa-coins"></i><span>Finance</span></button>
+        <button type="button" data-target="security"><i class="fa-solid fa-shield-halved"></i><span>Security</span></button>
+        <button type="button" data-target="integrations"><i class="fa-solid fa-plug"></i><span>Integrations</span></button>
+        <button type="button" data-target="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+      </div>
+
+      <button class="cd-logout" type="button"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <div class="cd-main">
+      <header class="cd-header" id="header">
+        <div class="cd-header-left">
+          <h1>Admin Dashboard</h1>
+        </div>
+        <div class="cd-header-actions">
+          <button class="cd-icon-btn" id="darkToggle" aria-label="Dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="cd-icon-btn" id="rtlToggle" aria-label="RTL"><i class="fa-solid fa-right-left"></i></button>
+          <button class="cd-icon-btn" id="notifyBtn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="cd-badge"></span></button>
+          <div class="cd-avatar" id="profileBtn">SA</div>
+          <button class="cd-icon-btn" id="mobileMenu" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <div class="cd-notify" id="notifyPanel">
+          <div class="cd-notify-item">System audit complete. 2 warnings found.</div>
+          <div class="cd-notify-item">New vendor contract pending approval.</div>
+          <div class="cd-notify-item">Weekly ops summary is ready.</div>
+        </div>
+
+        <div class="cd-dropdown" id="profileMenu">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <button>Logout</button>
+        </div>
+      </header>
+
+      <main class="cd-content">
+        <section class="section active" id="overview">
+          <div class="cd-stats">
+            <div class="cd-card">
+              <p>Net Revenue</p>
+              <h3>$482,190</h3>
+              <span>+18% this quarter</span>
+            </div>
+            <div class="cd-card">
+              <p>Operational SLAs</p>
+              <h3>97.2%</h3>
+              <span>On-time delivery</span>
+            </div>
+            <div class="cd-card">
+              <p>Active Vendors</p>
+              <h3>84</h3>
+              <span>+6 new partners</span>
+            </div>
+            <div class="cd-card">
+              <p>Risk Alerts</p>
+              <h3>3</h3>
+              <span>1 high priority</span>
+            </div>
+          </div>
+
+          <div class="cd-grid">
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Enterprise Revenue</h4>
+                <span>Trailing 12 weeks</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,120 30,115 60,98 90,82 120,90 150,70 180,66 210,58 240,50 270,45 300,38 320,40" fill="none" stroke="url(#gradAdmin)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradAdmin" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#22b7b1" />
+                    <stop offset="100%" stop-color="#6d7cff" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Margin Mix</h4>
+                <span>Portfolio spread</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#22b7b1" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#6d7cff" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 112 123 Z" fill="#b08a4f" />
+              </svg>
+              <div class="cd-legend">
+                <span><i class="fa-solid fa-circle"></i> Studio</span>
+                <span><i class="fa-solid fa-circle"></i> Wholesale</span>
+                <span><i class="fa-solid fa-circle"></i> Enterprise</span>
+              </div>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Ops Health</h4>
+              <div class="cd-progress">
+                <span>Fulfillment</span>
+                <div><em style="width: 91%"></em></div>
+                <strong>91%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Quality</span>
+                <div><em style="width: 86%"></em></div>
+                <strong>86%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Support</span>
+                <div><em style="width: 88%"></em></div>
+                <strong>88%</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="cd-card">
+            <div class="cd-card-head">
+              <h4>Executive Brief</h4>
+              <span>Today</span>
+            </div>
+            <div class="cd-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Initiative</th>
+                    <th>Owner</th>
+                    <th>Stage</th>
+                    <th>Risk</th>
+                    <th>Impact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Premium line rollout</td>
+                    <td>Ops</td>
+                    <td>QA Review</td>
+                    <td><span class="cd-pill warn">Medium</span></td>
+                    <td>$120k</td>
+                  </tr>
+                  <tr>
+                    <td>Vendor consolidation</td>
+                    <td>Finance</td>
+                    <td>Approved</td>
+                    <td><span class="cd-pill success">Low</span></td>
+                    <td>$64k</td>
+                  </tr>
+                  <tr>
+                    <td>Studio expansion</td>
+                    <td>Leadership</td>
+                    <td>Negotiation</td>
+                    <td><span class="cd-pill warn">High</span></td>
+                    <td>$210k</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="operations">
+          <div class="cd-subgrid">
+            <div class="cd-card">
+              <div class="cd-card-head">
+                <h4>Order Command</h4>
+                <span>Live operational flow</span>
+              </div>
+              <div class="cd-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Queue</th>
+                      <th>Orders</th>
+                      <th>SLA</th>
+                      <th>Status</th>
+                      <th>Owner</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fulfillment</td>
+                      <td>126</td>
+                      <td>3 days</td>
+                      <td><span class="cd-pill success">On Track</span></td>
+                      <td>Ops A</td>
+                    </tr>
+                    <tr>
+                      <td>Quality Control</td>
+                      <td>42</td>
+                      <td>1 day</td>
+                      <td><span class="cd-pill warn">Escalated</span></td>
+                      <td>QA Team</td>
+                    </tr>
+                    <tr>
+                      <td>Dispatch</td>
+                      <td>88</td>
+                      <td>2 days</td>
+                      <td><span class="cd-pill success">Stable</span></td>
+                      <td>Ops B</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cd-chip-row">
+                <span class="cd-chip">Backorders: 9</span>
+                <span class="cd-chip">High Priority: 7</span>
+                <span class="cd-chip">Escalations: 3</span>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Throughput</h4>
+                <span>Orders per day</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="85" width="26" height="55" rx="6" fill="#22b7b1" />
+                <rect x="60" y="65" width="26" height="75" rx="6" fill="#6d7cff" />
+                <rect x="100" y="40" width="26" height="100" rx="6" fill="#b08a4f" />
+                <rect x="140" y="60" width="26" height="80" rx="6" fill="#22b7b1" />
+                <rect x="180" y="50" width="26" height="90" rx="6" fill="#6d7cff" />
+              </svg>
+              <div class="cd-mini-stats">
+                <div>
+                  <p>Peak</p>
+                  <strong>148</strong>
+                </div>
+                <div>
+                  <p>Avg</p>
+                  <strong>112</strong>
+                </div>
+              </div>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Fulfillment Health</h4>
+              <div class="cd-progress">
+                <span>Picked</span>
+                <div><em style="width: 84%"></em></div>
+                <strong>84%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Packed</span>
+                <div><em style="width: 77%"></em></div>
+                <strong>77%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Shipped</span>
+                <div><em style="width: 71%"></em></div>
+                <strong>71%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="inventory">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-product">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Alpine Merino" />
+              <h4>Alpine Merino</h4>
+              <p>Lot: 4,210 units</p>
+              <div class="cd-actions">
+                <button class="cd-btn">Adjust</button>
+                <button class="cd-btn ghost">Pause</button>
+              </div>
+            </div>
+            <div class="cd-card cd-product">
+              <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=600&q=80" alt="Studio Silk" />
+              <h4>Studio Silk</h4>
+              <p>Lot: 2,980 units</p>
+              <div class="cd-actions">
+                <button class="cd-btn">Adjust</button>
+                <button class="cd-btn ghost">Pause</button>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Stock Coverage</h4>
+                <span>Weeks of supply</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="90" width="26" height="50" rx="6" fill="#22b7b1" />
+                <rect x="60" y="70" width="26" height="70" rx="6" fill="#6d7cff" />
+                <rect x="100" y="45" width="26" height="95" rx="6" fill="#b08a4f" />
+                <rect x="140" y="60" width="26" height="80" rx="6" fill="#22b7b1" />
+                <rect x="180" y="50" width="26" height="90" rx="6" fill="#6d7cff" />
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Low Stock Alerts</h4>
+              <div class="cd-list-compact">
+                <div><strong>Velvet Blend</strong><span>6 pallets</span></div>
+                <div><strong>Snow Drift</strong><span>4 pallets</span></div>
+                <div><strong>Amber Twist</strong><span>3 pallets</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="team">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-list-item">
+              <div>
+                <strong>Operations Lead</strong>
+                <span>m.park@boutiqueyarn.com</span>
+              </div>
+              <p>Active</p>
+            </div>
+            <div class="cd-card cd-list-item">
+              <div>
+                <strong>Finance Director</strong>
+                <span>r.ward@boutiqueyarn.com</span>
+              </div>
+              <p>Active</p>
+            </div>
+            <div class="cd-card cd-list-item">
+              <div>
+                <strong>Studio Manager</strong>
+                <span>l.chen@boutiqueyarn.com</span>
+              </div>
+              <p>Travel</p>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Team Load</h4>
+                <span>Tasks by department</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="60" y="65" width="26" height="75" rx="6" fill="#6d7cff" />
+                <rect x="100" y="50" width="26" height="90" rx="6" fill="#b08a4f" />
+                <rect x="140" y="70" width="26" height="70" rx="6" fill="#22b7b1" />
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Hiring Pipeline</h4>
+              <div class="cd-list-compact">
+                <div><strong>Fulfillment Lead</strong><span>Interview</span></div>
+                <div><strong>QA Supervisor</strong><span>Offer</span></div>
+                <div><strong>Support Analyst</strong><span>Screen</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="finance">
+          <div class="cd-subgrid">
+            <div class="cd-card">
+              <p>Cash Position</p>
+              <h3>$1.42M</h3>
+              <span>Runway 18 months</span>
+            </div>
+            <div class="cd-card">
+              <p>AR Balance</p>
+              <h3>$214k</h3>
+              <span>Avg 23 days</span>
+            </div>
+            <div class="cd-card">
+              <p>AP Balance</p>
+              <h3>$168k</h3>
+              <span>Avg 17 days</span>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Cash Flow</h4>
+                <span>Monthly</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,120 40,95 80,105 120,85 160,88 200,70 240,75 280,60 320,55" fill="none" stroke="url(#gradCash)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradCash" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#b08a4f" />
+                    <stop offset="100%" stop-color="#22b7b1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Top Expenses</h4>
+              <div class="cd-list-compact">
+                <div><strong>Raw Materials</strong><span>$92k</span></div>
+                <div><strong>Logistics</strong><span>$48k</span></div>
+                <div><strong>Studio Ops</strong><span>$36k</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="security">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-metric">
+              <h4>Access Overview</h4>
+              <div class="cd-list-compact">
+                <div><strong>Admins</strong><span>8 active</span></div>
+                <div><strong>Managers</strong><span>24 active</span></div>
+                <div><strong>Vendors</strong><span>42 active</span></div>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Auth Events</h4>
+                <span>Last 14 days</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="60" y="60" width="26" height="80" rx="6" fill="#6d7cff" />
+                <rect x="100" y="70" width="26" height="70" rx="6" fill="#b08a4f" />
+                <rect x="140" y="50" width="26" height="90" rx="6" fill="#22b7b1" />
+                <rect x="180" y="85" width="26" height="55" rx="6" fill="#6d7cff" />
+              </svg>
+            </div>
+            <div class="cd-card">
+              <div class="cd-card-head">
+                <h4>Audit Log</h4>
+                <span>Recent activity</span>
+              </div>
+              <div class="cd-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Action</th>
+                      <th>Scope</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Admin</td>
+                      <td>Updated vendor terms</td>
+                      <td>Finance</td>
+                      <td>2h ago</td>
+                    </tr>
+                    <tr>
+                      <td>Ops Lead</td>
+                      <td>Paused batch #BY-44</td>
+                      <td>Inventory</td>
+                      <td>6h ago</td>
+                    </tr>
+                    <tr>
+                      <td>System</td>
+                      <td>Rotated API keys</td>
+                      <td>Security</td>
+                      <td>Yesterday</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="integrations">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-metric">
+              <h4>Connected Apps</h4>
+              <div class="cd-list-compact">
+                <div><strong>NetSuite</strong><span>Syncing</span></div>
+                <div><strong>ShipStation</strong><span>Healthy</span></div>
+                <div><strong>HubSpot</strong><span>Limited</span></div>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>API Volume</h4>
+                <span>Requests / day</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,110 40,100 80,90 120,85 160,70 200,75 240,60 280,55 320,50" fill="none" stroke="url(#gradApi)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradApi" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#6d7cff" />
+                    <stop offset="100%" stop-color="#22b7b1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cd-card">
+              <div class="cd-card-head">
+                <h4>Workflow Automations</h4>
+                <span>Active rules</span>
+              </div>
+              <div class="cd-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Automation</th>
+                      <th>Trigger</th>
+                      <th>Owner</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>PO Auto-approve</td>
+                      <td>Spend &lt; $2k</td>
+                      <td>Finance</td>
+                      <td><span class="cd-pill success">Enabled</span></td>
+                    </tr>
+                    <tr>
+                      <td>Stock Reorder</td>
+                      <td>Below 15%</td>
+                      <td>Inventory</td>
+                      <td><span class="cd-pill success">Enabled</span></td>
+                    </tr>
+                    <tr>
+                      <td>VIP Escalation</td>
+                      <td>Delay &gt; 48h</td>
+                      <td>Support</td>
+                      <td><span class="cd-pill warn">Review</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="settings">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-form">
+              <h4>Admin Profile</h4>
+              <label>Name</label>
+              <input type="text" value="Sienna Avery" />
+              <label>Email</label>
+              <input type="email" value="admin@boutiqueyarn.com" />
+              <label>Role</label>
+              <select>
+                <option>Super Admin</option>
+                <option>Finance Admin</option>
+                <option>Ops Admin</option>
+              </select>
+              <div class="cd-toggle">
+                <input type="checkbox" checked />
+                <span>Require MFA for all admins</span>
+              </div>
+              <div class="cd-toggle">
+                <input type="checkbox" />
+                <span>Enable audit exports</span>
+              </div>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Permissions</h4>
+              <div class="cd-list-compact">
+                <div><strong>Finance</strong><span>Full</span></div>
+                <div><strong>Inventory</strong><span>Restricted</span></div>
+                <div><strong>Support</strong><span>Read-only</span></div>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>System Load</h4>
+                <span>Service uptime</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="90" width="26" height="50" rx="6" fill="#22b7b1" />
+                <rect x="60" y="70" width="26" height="70" rx="6" fill="#6d7cff" />
+                <rect x="100" y="50" width="26" height="90" rx="6" fill="#b08a4f" />
+                <rect x="140" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="180" y="40" width="26" height="100" rx="6" fill="#6d7cff" />
+              </svg>
+              <div class="cd-legend">
+                <span><i class="fa-solid fa-circle"></i> Core</span>
+                <span><i class="fa-solid fa-circle"></i> Ops</span>
+                <span><i class="fa-solid fa-circle"></i> Data</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+

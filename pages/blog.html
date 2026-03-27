@@ -1,0 +1,462 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boutique Yarn - Premium Craft Supplies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+  <body class="blog-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mt-4 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
+          <nav class="flex h-16 items-center justify-between gap-4 px-4 sm:px-6" aria-label="Main">
+            <div class="flex items-center gap-8 rtl-reverse">
+              <a href="index.html" class="flex items-center gap-3 rounded-xl px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+                    <path fill="currentColor" d="M12 2c-2.6 0-5 1.4-6.3 3.7l6.3 3.6 6.3-3.6C17 3.4 14.6 2 12 2Zm-7 6.6v5.1c0 2.6 1.4 5 3.7 6.3l3.3-6-7-5.4Zm14 0-7 5.4 3.3 6c2.3-1.3 3.7-3.7 3.7-6.3V8.6Z" />
+                  </svg>
+                </span>
+                <div class="leading-tight">
+                  <p class="text-base font-semibold tracking-tight">Boutique Yarn</p>
+                  <p class="text-xs text-[color:rgb(var(--muted))]">Craft Supply Studio</p>
+                  
+                </div>
+              </a>
+
+              <div class="hidden items-center gap-1 lg:flex">
+                <div class="relative" data-dropdown>
+                  <button class="nav-link group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu" data-dropdown-trigger>
+                    <span>Home</span>
+                    <svg class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill="currentColor" d="M5.25 7.5 10 12.25 14.75 7.5z" />
+                    </svg>
+                  </button>
+                  <div id="home-menu" class="pointer-events-none absolute left-0 top-[calc(100%+12px)] w-56 translate-y-2 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.92)] p-2 opacity-0 shadow-[0_30px_60px_-40px_rgba(15,23,42,0.45)] backdrop-blur-2xl transition-all duration-200" role="menu" data-dropdown-menu>
+                    <a href="index.html" class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[color:rgb(var(--text))] transition hover:bg-[color:rgb(var(--accent)/0.08)]" role="menuitem">Home Page 1<span class="text-xs text-[color:rgb(var(--muted))]">General</span></a>
+                    <a href="home page2.html" class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[color:rgb(var(--text))] transition hover:bg-[color:rgb(var(--accent)/0.08)]" role="menuitem">Home Page 2<span class="text-xs text-[color:rgb(var(--muted))]">Niche</span></a>
+                  </div>
+                </div>
+
+                <a href="about.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                  About Us
+                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
+                </a>
+                <a href="products.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                  Products
+                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
+                </a>
+                <a href="blog.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                  Blog
+                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
+                </a>
+                <a href="pricing page.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                  Pricing
+                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
+                </a>
+                <a href="contact.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
+                  Contact
+                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
+                </a>
+                <div class="relative" data-dropdown>
+                  <button class="group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="dashboard-menu" data-dropdown-trigger>
+                    <span>Dashboards</span>
+                    <svg class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill="currentColor" d="M5.25 7.5 10 12.25 14.75 7.5z" />
+                    </svg>
+                  </button>
+                  <div id="dashboard-menu" class="pointer-events-none absolute left-0 top-[calc(100%+12px)] w-60 translate-y-2 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.92)] p-2 opacity-0 shadow-[0_30px_60px_-40px_rgba(15,23,42,0.45)] backdrop-blur-2xl transition-all duration-200" role="menu" data-dropdown-menu>
+                    <a href="user dashboard.html" class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[color:rgb(var(--text))] transition hover:bg-[color:rgb(var(--accent)/0.08)]" role="menuitem">Customer Dashboard<span class="text-xs text-[color:rgb(var(--muted))]">Library</span></a>
+                    <a href="admin dashbaord.html" class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[color:rgb(var(--text))] transition hover:bg-[color:rgb(var(--accent)/0.08)]" role="menuitem">Admin Dashboard<span class="text-xs text-[color:rgb(var(--muted))]">Manage</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden items-center gap-3 lg:flex">
+              <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg class="h-5 w-5 transition-transform duration-200 group-hover:rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-sun>
+                  <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.9a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.1a1 1 0 0 1 1-1ZM5.1 5.1a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4Zm12.6 12.6a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4ZM4 12a1 1 0 0 1 1-1h1.1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1Zm12.9 0a1 1 0 0 1 1-1H19a1 1 0 1 1 0 2h-1.1a1 1 0 0 1-1-1ZM5.1 18.9a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0Zm12.6-12.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
+                </svg>
+                <svg class="hidden h-5 w-5 transition-transform duration-200 group-hover:-rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-moon>
+                  <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" />
+                </svg>
+              </button>
+
+              <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
+                RTL
+                <span class="h-1.5 w-1.5 rounded-full bg-[color:rgb(var(--accent))]"></span>
+              </button>
+
+              <a href="products.html" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="View cart">
+                <svg class="h-5 w-5 transition-transform duration-200 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M7 6h14l-2 8H8L6 4H3V2h4l1 4Zm2 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" />
+                </svg>
+                <span class="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-full bg-[color:rgb(var(--accent))] shadow-[0_0_0_3px_rgb(var(--glass)/0.7)]" aria-hidden="true"></span>
+              </a>
+
+              <a href="login.html" class="rounded-full bg-[color:rgb(var(--accent))] px-5 py-2 text-sm font-semibold text-white shadow-[0_15px_35px_-20px_rgba(236,72,153,0.8)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-22px_rgba(236,72,153,0.9)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[color:rgb(var(--accent))]">Login</a>
+            </div>
+
+            <button id="mobile-toggle" class="flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))] lg:hidden" aria-label="Open menu" aria-expanded="false">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4 7h16v2H4V7Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="pointer-events-none fixed inset-0 z-40 bg-black/30 opacity-0 transition-opacity duration-200 lg:hidden">
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85%] translate-x-full overflow-y-auto bg-[color:rgb(var(--page-bg))] p-6 pb-10 shadow-2xl transition-transform duration-300">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-[color:rgb(var(--muted))]">Menu</span>
+            <button id="mobile-close" class="flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)]" aria-label="Close menu">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4 6.4 5Z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="home">
+              Home
+              <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill="currentColor" d="M5.25 7.5 10 12.25 14.75 7.5z" />
+              </svg>
+            </button>
+            <div class="hidden space-y-2 pl-4 text-sm" data-mobile-menu="home">
+              <a href="index.html" class="block rounded-xl px-3 py-2 text-[color:rgb(var(--text))]">Home Page 1</a>
+              <a href="home page2.html" class="block rounded-xl px-3 py-2 text-[color:rgb(var(--text))]">Home Page 2</a>
+            </div>
+            <a href="about.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">About Us</a>
+            <a href="products.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Products</a>
+            <a href="blog.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Blog</a>
+            <a href="pricing page.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Pricing</a>
+            <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="dashboards">
+              Dashboards
+              <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill="currentColor" d="M5.25 7.5 10 12.25 14.75 7.5z" />
+              </svg>
+            </button>
+            <div class="hidden space-y-2 pl-4 text-sm" data-mobile-menu="dashboards">
+              <a href="user dashboard.html" class="block rounded-xl px-3 py-2 text-[color:rgb(var(--text))]">Customer Dashboard</a>
+              <a href="admin dashbaord.html" class="block rounded-xl px-3 py-2 text-[color:rgb(var(--text))]">Admin Dashboard</a>
+            </div>
+            <a href="contact.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Contact</a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="flex h-11 flex-1 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)]" data-theme-toggle-mobile>Theme</button>
+            <button class="flex h-11 flex-1 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)]" data-rtl-toggle-mobile>RTL</button>
+            <a href="login.html" class="flex h-11 flex-1 items-center justify-center rounded-full bg-[color:rgb(var(--accent))] text-sm font-semibold text-white">Login</a>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- PREMIUM BLOG HERO -->
+<section class="blog-hero-premium">
+
+  <!-- BACKGROUND -->
+  <div class="hero-bg">
+    <img src="https://picsum.photos/1600/900?random=101" alt="Blog Image">
+  </div>
+
+  <!-- CONTENT CARD -->
+  <div class="container">
+    <div class="hero-card">
+
+      <span class="badge">Craft & Creativity</span>
+
+      <h1>
+        Crafting Stories Through Every Thread:
+        Why Handmade Matters More Than Ever
+      </h1>
+
+      <p class="desc">
+        In a fast-paced world, handmade creations bring mindfulness,
+        authenticity, and emotional connection back into our lives.
+      </p>
+
+      <div class="meta">
+        <img src="https://i.pravatar.cc/40?img=12" alt="author">
+        <div>
+          <strong>Ravi Varma</strong>
+          <span>March 20 â€¢ 5 min read</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!-- BLOG HERO END -->
+<!-- FEATURED BLOG POSTS -->
+<section class="blog-featured">
+  <div class="container">
+    <div class="blog-featured-head">
+      <h2 class="section-title">Featured Articles</h2>
+      <p>Curated editorials, tutorials, and studio notes to inspire your next project.</p>
+    </div>
+
+    <div class="blog-featured-grid">
+      <article class="blog-featured-card">
+        <div class="blog-featured-image">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Crochet starter kit">
+          <span class="blog-featured-tag">Crochet</span>
+        </div>
+        <div class="blog-featured-body">
+          <h3>Mastering Crochet: A Beginnerâ€™s Guide</h3>
+          <p>Learn the fundamentals of crochet and start creating beautiful handmade designs today.</p>
+          <div class="blog-featured-meta">
+            <span>Ravi Varma</span>
+            <span>â€¢</span>
+            <span>Mar 20, 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-featured-card">
+        <div class="blog-featured-image">
+          <img src="https://images.pexels.com/photos/6163742/pexels-photo-6163742.jpeg" alt="Knitting essentials">
+          <span class="blog-featured-tag">Knitting</span>
+        </div>
+        <div class="blog-featured-body">
+          <h3>Why Knitting is the New Meditation</h3>
+          <p>Discover how knitting helps reduce stress and improves focus in daily life.</p>
+          <div class="blog-featured-meta">
+            <span>Ravi Varma</span>
+            <span>â€¢</span>
+            <span>Mar 18, 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-featured-card">
+        <div class="blog-featured-image">
+          <img src="https://images.pexels.com/photos/4792084/pexels-photo-4792084.jpeg" alt="Craft tools flatlay">
+          <span class="blog-featured-tag">Tips</span>
+        </div>
+        <div class="blog-featured-body">
+          <h3>5 Tools Every Crafter Should Own</h3>
+          <p>Upgrade your toolkit with these essential crafting tools for better results.</p>
+          <div class="blog-featured-meta">
+            <span>Ravi Varma</span>
+            <span>â€¢</span>
+            <span>Mar 15, 2026</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- PREMIUM SIDEBAR START -->
+<aside class="premium-sidebar">
+
+  <!-- SEARCH -->
+  <div class="sidebar-card search-card">
+    <h5 class="card-title">Search</h5>
+    <div class="search-wrapper">
+      <input type="text" placeholder="Search articles...">
+      <span class="search-icon">ðŸ”</span>
+    </div>
+  </div>
+
+  <!-- POPULAR POSTS -->
+  <div class="sidebar-card">
+    <h5 class="card-title">Popular Articles</h5>
+
+    <div class="post-item">
+      <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=200" alt="">
+      <div class="post-content">
+        <p>Mastering Crochet Basics</p>
+        <span>March 20, 2026</span>
+      </div>
+    </div>
+
+    <div class="post-item">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200" alt="">
+      <div class="post-content">
+        <p>Relaxing Knitting Techniques</p>
+        <span>March 18, 2026</span>
+      </div>
+    </div>
+
+    <div class="post-item">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=200" alt="">
+      <div class="post-content">
+        <p>Top Tools for Crafters</p>
+        <span>March 15, 2026</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="sidebar-card">
+    <h5 class="card-title">Categories</h5>
+
+    <ul class="category-list">
+      <li><span>Crochet</span><b>12</b></li>
+      <li><span>Knitting</span><b>9</b></li>
+      <li><span>Tutorials</span><b>15</b></li>
+      <li><span>Tips</span><b>7</b></li>
+    </ul>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="sidebar-card newsletter-card">
+    <h5 class="card-title">Stay Inspired</h5>
+    <p class="newsletter-text">Get premium patterns & tips weekly.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button class="subscribe-btn">Subscribe</button>
+  </div>
+
+</aside>
+<!-- PREMIUM SIDEBAR END -->
+<!-- BLOG GRID START -->
+<section class="blog-grid-section">
+  <div class="blog-grid-container">
+
+    <h2 class="blog-grid-title">Latest Articles</h2>
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <img src="https://images.pexels.com/photos/4792082/pexels-photo-4792082.jpeg" alt="">
+        <div class="blog-card-content">
+          <span class="blog-category">Crochet</span>
+          <h3>10 Crochet Patterns You Must Try</h3>
+          <p>Discover these unique crochet patterns perfect for beginners and pros alike.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.pexels.com/photos/6163742/pexels-photo-6163742.jpeg" alt="">
+        <div class="blog-card-content">
+          <span class="blog-category">Knitting</span>
+          <h3>How Knitting Improves Mental Health</h3>
+          <p>Explore the soothing benefits of knitting and why itâ€™s great for your mind.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.pexels.com/photos/6213/woman-hand-pen-girl.jpg" alt="">
+        <div class="blog-card-content">
+          <span class="blog-category">Tutorial</span>
+          <h3>Step-by-Step Yarn Dyeing Tutorial</h3>
+          <p>Learn how to dye yarn at home safely with professional-looking results.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.pexels.com/photos/3951826/pexels-photo-3951826.jpeg" alt="">
+        <div class="blog-card-content">
+          <span class="blog-category">Tips</span>
+          <h3>5 Tips for Storing Your Yarn Properly</h3>
+          <p>Keep your yarn fresh, vibrant, and tangle-free with these expert tips.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- BLOG GRID END -->
+<!-- BLOG CTA SECTION START -->
+<section class="blog-cta">
+  <div class="blog-cta-container">
+    <h2>Start Your Creative Journey</h2>
+    <p>Join our community of creators and explore premium patterns, tips, and tutorials.</p>
+    <a href="#subscribe" class="btn cta-btn">Get Started</a>
+  </div>
+</section>
+<!-- BLOG CTA SECTION END -->
+ <footer class="mt-24 border-t border-[color:rgb(var(--border)/0.2)] bg-[color:rgb(var(--glass)/0.6)]">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+                  <path fill="currentColor" d="M12 2c-2.6 0-5 1.4-6.3 3.7l6.3 3.6 6.3-3.6C17 3.4 14.6 2 12 2Zm-7 6.6v5.1c0 2.6 1.4 5 3.7 6.3l3.3-6-7-5.4Zm14 0-7 5.4 3.3 6c2.3-1.3 3.7-3.7 3.7-6.3V8.6Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-base font-semibold">Boutique Yarn</p>
+              <p class="text-xs text-[color:rgb(var(--muted))]">Craft Supply Studio</p>
+                
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-[color:rgb(var(--muted))]">Premium yarn, tools, and pattern kits curated for modern makers. Discover seasonal palettes, limited drops, and free studio patterns.</p>
+            <div class="mt-6 flex items-center gap-3">
+              <a href="contact.html" class="btn btn-primary">Book a Visit</a>
+              <a href="products.html" class="btn btn-outline">Shop Supplies</a>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Company</p>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="about.html" class="transition hover:text-[color:rgb(var(--accent))]">About Us</a></li>
+              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Studio Journal</a></li>
+              <li><a href="pricing page.html" class="transition hover:text-[color:rgb(var(--accent))]">Membership</a></li>
+              <li><a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Shop</p>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">New Arrivals</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Yarn Library</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Needles & Tools</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Gift Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Stay In Touch</p>
+            <p class="mt-4 text-sm text-[color:rgb(var(--muted))]">Weekly pattern drops, studio news, and exclusive bundles.</p>
+            <form class="mt-5 flex flex-col gap-3 sm:flex-row">
+              <label class="sr-only" for="footer-email">Email address</label>
+              <input id="footer-email" name="email" type="email" placeholder="you@email.com" class="h-11 flex-1 rounded-full border border-[color:rgb(var(--border)/0.3)] bg-transparent px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div class="mt-6 flex items-center gap-4 text-sm text-[color:rgb(var(--muted))]">
+              <span>Instagram</span>
+              <span>Dribbble</span>
+              <span>Pinterest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-4 border-t border-[color:rgb(var(--border)/0.2)] pt-6 text-sm text-[color:rgb(var(--muted))] sm:flex-row sm:items-center sm:justify-between">
+          <p>(c) 2026 Boutique Yarn. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="privacy.html" class="transition hover:text-[color:rgb(var(--accent))]">Privacy</a>
+            <a href="terms.html" class="transition hover:text-[color:rgb(var(--accent))]">Terms</a>
+            <a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

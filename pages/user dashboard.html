@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Yarn - Client Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body class="scrollbar client-dashboard">
+  <div class="cd-app">
+    <aside class="cd-sidebar" id="sidebar">
+      <div class="cd-brand">
+        <span class="cd-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2c-2.6 0-5 1.4-6.3 3.7l6.3 3.6 6.3-3.6C17 3.4 14.6 2 12 2Zm-7 6.6v5.1c0 2.6 1.4 5 3.7 6.3l3.3-6-7-5.4Zm14 0-7 5.4 3.3 6c2.3-1.3 3.7-3.7 3.7-6.3V8.6Z" />
+          </svg>
+        </span>
+        <div>
+          <p class="cd-brand-title">Boutique Yarn</p>
+          <p class="cd-brand-sub">Craft Supply Studio</p>
+        </div>
+      </div>
+
+      <div class="cd-nav" id="nav">
+        <button type="button" class="active" data-target="overview"><i class="fa-solid fa-gauge-high"></i><span>Overview</span></button>
+        <button type="button" data-target="orders"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span></button>
+        <button type="button" data-target="products"><i class="fa-solid fa-cube"></i><span>Products</span></button>
+        <button type="button" data-target="customers"><i class="fa-solid fa-user-group"></i><span>Customers</span></button>
+        <button type="button" data-target="analytics"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></button>
+        <button type="button" data-target="messages"><i class="fa-solid fa-message"></i><span>Messages</span></button>
+        <button type="button" data-target="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+      </div>
+
+      <button class="cd-logout" type="button"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <div class="cd-main">
+      <header class="cd-header" id="header">
+        <div class="cd-header-left">
+          <h1>Client Dashboard</h1>
+        </div>
+        <div class="cd-header-actions">
+          <button class="cd-icon-btn" id="darkToggle" aria-label="Dark mode"><i class="fa-regular fa-moon"></i></button>
+          <button class="cd-icon-btn" id="rtlToggle" aria-label="RTL"><i class="fa-solid fa-right-left"></i></button>
+          <button class="cd-icon-btn" id="notifyBtn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="cd-badge"></span></button>
+          <div class="cd-avatar" id="profileBtn">AA</div>
+          <button class="cd-icon-btn" id="mobileMenu" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <div class="cd-notify" id="notifyPanel">
+          <div class="cd-notify-item">VIP order from Loom Atelier is ready.</div>
+          <div class="cd-notify-item">New pattern upload approved.</div>
+          <div class="cd-notify-item">Monthly revenue report generated.</div>
+        </div>
+
+        <div class="cd-dropdown" id="profileMenu">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <button>Logout</button>
+        </div>
+      </header>
+
+      <main class="cd-content">
+        <section class="section active" id="overview">
+          <div class="cd-stats">
+            <div class="cd-card">
+              <p>Total Sales</p>
+              <h3>$214,890</h3>
+              <span>+22% this month</span>
+            </div>
+            <div class="cd-card">
+              <p>Orders</p>
+              <h3>3,120</h3>
+              <span>+8% weekly</span>
+            </div>
+            <div class="cd-card">
+              <p>Customers</p>
+              <h3>1,982</h3>
+              <span>+14% growth</span>
+            </div>
+            <div class="cd-card">
+              <p>Revenue</p>
+              <h3>$98,430</h3>
+              <span>Recurring</span>
+            </div>
+          </div>
+
+          <div class="cd-grid">
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Sales Velocity</h4>
+                <span>Last 12 weeks</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,120 30,110 60,95 90,80 120,90 150,70 180,60 210,65 240,48 270,55 300,35 320,40" fill="none" stroke="url(#gradSales)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradSales" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#22b7b1" />
+                    <stop offset="100%" stop-color="#6d7cff" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Monthly Revenue</h4>
+                <span>2026</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="70" width="22" height="70" rx="6" fill="#22b7b1" />
+                <rect x="60" y="50" width="22" height="90" rx="6" fill="#6d7cff" />
+                <rect x="100" y="80" width="22" height="60" rx="6" fill="#b08a4f" />
+                <rect x="140" y="40" width="22" height="100" rx="6" fill="#22b7b1" />
+                <rect x="180" y="30" width="22" height="110" rx="6" fill="#6d7cff" />
+                <rect x="220" y="60" width="22" height="80" rx="6" fill="#b08a4f" />
+                <rect x="260" y="45" width="22" height="95" rx="6" fill="#22b7b1" />
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Category Mix</h4>
+                <span>Top segments</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#22b7b1" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#6d7cff" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 110 120 Z" fill="#b08a4f" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="cd-grid">
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Channel Contribution</h4>
+                <span>Web / Wholesale / Studio</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="30" y="60" width="24" height="80" rx="6" fill="#22b7b1" />
+                <rect x="70" y="40" width="24" height="100" rx="6" fill="#6d7cff" />
+                <rect x="110" y="80" width="24" height="60" rx="6" fill="#b08a4f" />
+                <rect x="150" y="50" width="24" height="90" rx="6" fill="#22b7b1" />
+                <rect x="190" y="70" width="24" height="70" rx="6" fill="#6d7cff" />
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Weekly Trend</h4>
+                <span>Orders per day</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,110 40,95 80,105 120,85 160,90 200,70 240,75 280,60 320,55" fill="none" stroke="#22b7b1" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Premium Share</h4>
+                <span>Tier distribution</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#6d7cff" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#22b7b1" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 115 123 Z" fill="#b08a4f" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="cd-card">
+            <div class="cd-card-head">
+              <h4>Recent Orders</h4>
+              <span>Live updates</span>
+            </div>
+            <div class="cd-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#BY-2219</td>
+                    <td>Willow Studio</td>
+                    <td>Mar 22, 2026</td>
+                    <td><span class="cd-pill success">Delivered</span></td>
+                    <td>$4,220</td>
+                  </tr>
+                  <tr>
+                    <td>#BY-2218</td>
+                    <td>Atlas Knit Co.</td>
+                    <td>Mar 21, 2026</td>
+                    <td><span class="cd-pill warn">Pending</span></td>
+                    <td>$1,740</td>
+                  </tr>
+                  <tr>
+                    <td>#BY-2217</td>
+                    <td>Silk &amp; Loom</td>
+                    <td>Mar 20, 2026</td>
+                    <td><span class="cd-pill success">Delivered</span></td>
+                    <td>$3,980</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="orders">
+          <div class="cd-subgrid">
+            <div class="cd-card">
+              <div class="cd-card-head">
+                <h4>Order Pipeline</h4>
+                <span>Priority queue</span>
+              </div>
+              <div class="cd-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Order</th>
+                      <th>Client</th>
+                      <th>Stage</th>
+                      <th>Status</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#BY-2221</td>
+                      <td>Lumen Atelier</td>
+                      <td>Fulfillment</td>
+                      <td><span class="cd-pill warn">At Risk</span></td>
+                      <td>$6,500</td>
+                    </tr>
+                    <tr>
+                      <td>#BY-2220</td>
+                      <td>Threadline</td>
+                      <td>Dispatch</td>
+                      <td><span class="cd-pill success">On Track</span></td>
+                      <td>$8,920</td>
+                    </tr>
+                    <tr>
+                      <td>#BY-2219</td>
+                      <td>Arc Loom</td>
+                      <td>QA Review</td>
+                      <td><span class="cd-pill success">Cleared</span></td>
+                      <td>$5,120</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cd-chip-row">
+                <span class="cd-chip">Rush: 4</span>
+                <span class="cd-chip">Backorder: 2</span>
+                <span class="cd-chip">SLA Today: 9</span>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Fulfillment Rate</h4>
+                <span>Last 90 days</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,110 40,105 80,90 120,95 160,70 200,80 240,60 280,58 320,40" fill="none" stroke="url(#gradShip)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradShip" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#22b7b1" />
+                    <stop offset="100%" stop-color="#b08a4f" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="cd-mini-stats">
+                <div>
+                  <p>On-Time</p>
+                  <strong>96.4%</strong>
+                </div>
+                <div>
+                  <p>Avg SLA</p>
+                  <strong>2.4 days</strong>
+                </div>
+              </div>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Dispatch Health</h4>
+              <div class="cd-progress">
+                <span>Picked</span>
+                <div><em style="width: 82%"></em></div>
+                <strong>82%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Packed</span>
+                <div><em style="width: 74%"></em></div>
+                <strong>74%</strong>
+              </div>
+              <div class="cd-progress">
+                <span>Shipped</span>
+                <div><em style="width: 68%"></em></div>
+                <strong>68%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="products">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-product">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Merino Luxe" />
+              <h4>Merino Luxe</h4>
+              <p>$48 / spool</p>
+              <div class="cd-actions">
+                <button class="cd-btn">Edit</button>
+                <button class="cd-btn ghost">Delete</button>
+              </div>
+            </div>
+            <div class="cd-card cd-product">
+              <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=600&q=80" alt="Silk Mist" />
+              <h4>Silk Mist</h4>
+              <p>$64 / spool</p>
+              <div class="cd-actions">
+                <button class="cd-btn">Edit</button>
+                <button class="cd-btn ghost">Delete</button>
+              </div>
+            </div>
+            <div class="cd-card cd-product">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Aura Blend" />
+              <h4>Aura Blend</h4>
+              <p>$38 / spool</p>
+              <div class="cd-actions">
+                <button class="cd-btn">Edit</button>
+                <button class="cd-btn ghost">Delete</button>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Inventory Mix</h4>
+                <span>Stock by category</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#22b7b1" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#6d7cff" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 105 125 Z" fill="#b08a4f" />
+              </svg>
+              <div class="cd-legend">
+                <span><i class="fa-solid fa-circle"></i> Wool</span>
+                <span><i class="fa-solid fa-circle"></i> Silk</span>
+                <span><i class="fa-solid fa-circle"></i> Blend</span>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Top Sellers</h4>
+                <span>Units sold</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="60" y="60" width="26" height="80" rx="6" fill="#6d7cff" />
+                <rect x="100" y="40" width="26" height="100" rx="6" fill="#b08a4f" />
+                <rect x="140" y="70" width="26" height="70" rx="6" fill="#22b7b1" />
+                <rect x="180" y="50" width="26" height="90" rx="6" fill="#6d7cff" />
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Low Stock Alerts</h4>
+              <div class="cd-list-compact">
+                <div><strong>Merino Luxe</strong><span>12 units left</span></div>
+                <div><strong>Silk Mist</strong><span>9 units left</span></div>
+                <div><strong>Aura Blend</strong><span>7 units left</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="customers">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-list-item">
+              <div>
+                <strong>Willow Studio</strong>
+                <span>hello@willowstudio.com</span>
+              </div>
+              <p>34 orders</p>
+            </div>
+            <div class="cd-card cd-list-item">
+              <div>
+                <strong>Atlas Knit</strong>
+                <span>team@atlasknit.co</span>
+              </div>
+              <p>27 orders</p>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Customer Mix</h4>
+                <span>Tier split</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#6d7cff" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#22b7b1" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 115 123 Z" fill="#b08a4f" />
+              </svg>
+              <div class="cd-legend">
+                <span><i class="fa-solid fa-circle"></i> Enterprise</span>
+                <span><i class="fa-solid fa-circle"></i> Premium</span>
+                <span><i class="fa-solid fa-circle"></i> Studio</span>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Retention Curve</h4>
+                <span>12 months</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,40 40,50 80,65 120,80 160,92 200,102 240,108 280,115 320,120" fill="none" stroke="#22b7b1" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>NPS Snapshot</h4>
+              <div class="cd-nps">
+                <div><strong>62</strong><span>Promoters</span></div>
+                <div><strong>22</strong><span>Passives</span></div>
+                <div><strong>6</strong><span>Detractors</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="analytics">
+          <div class="cd-subgrid">
+            <div class="cd-card">
+              <p>Growth</p>
+              <h3>+28%</h3>
+              <span class="trend up">? +6% vs last month</span>
+            </div>
+            <div class="cd-card">
+              <p>Churn</p>
+              <h3>2.1%</h3>
+              <span class="trend down">? -0.4% improved</span>
+            </div>
+            <div class="cd-card">
+              <p>Conversion</p>
+              <h3>12.4%</h3>
+              <span class="trend up">? +1.1% in 30 days</span>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Engagement</h4>
+                <span>Weekly sessions</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <polyline points="0,120 40,100 80,115 120,90 160,95 200,70 240,75 280,55 320,60" fill="none" stroke="url(#gradEng)" stroke-width="4" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="gradEng" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#6d7cff" />
+                    <stop offset="100%" stop-color="#22b7b1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Channel Mix</h4>
+                <span>Revenue share</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <circle cx="90" cy="80" r="50" fill="#22b7b1" />
+                <path d="M90 30 A50 50 0 0 1 140 80 L90 80 Z" fill="#6d7cff" />
+                <path d="M90 80 L140 80 A50 50 0 0 1 115 123 Z" fill="#b08a4f" />
+              </svg>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Regional Revenue</h4>
+                <span>Top markets</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="60" y="60" width="26" height="80" rx="6" fill="#6d7cff" />
+                <rect x="100" y="40" width="26" height="100" rx="6" fill="#b08a4f" />
+                <rect x="140" y="70" width="26" height="70" rx="6" fill="#22b7b1" />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="messages">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-chat-list">
+              <h4>Conversations</h4>
+              <div class="cd-chat-item"><strong>Lumen Weave</strong><span>Order feedback</span></div>
+              <div class="cd-chat-item"><strong>Silk Studio</strong><span>New shipment</span></div>
+              <div class="cd-chat-item"><strong>Atlas Knit</strong><span>Pricing update</span></div>
+            </div>
+            <div class="cd-card cd-chat-window">
+              <h4>Message View</h4>
+              <div class="cd-bubble">We loved the Aura Blend palette. Can we order 40 more?</div>
+              <div class="cd-bubble right">Absolutely. I will prepare an updated invoice today.</div>
+              <div class="cd-bubble">Perfect, thank you!</div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Response Time</h4>
+                <span>Average hours</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="30" y="70" width="26" height="70" rx="6" fill="#22b7b1" />
+                <rect x="70" y="50" width="26" height="90" rx="6" fill="#6d7cff" />
+                <rect x="110" y="80" width="26" height="60" rx="6" fill="#b08a4f" />
+                <rect x="150" y="40" width="26" height="100" rx="6" fill="#22b7b1" />
+                <rect x="190" y="60" width="26" height="80" rx="6" fill="#6d7cff" />
+                <rect x="230" y="90" width="26" height="50" rx="6" fill="#b08a4f" />
+              </svg>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Saved Replies</h4>
+              <div class="cd-list-compact">
+                <div><strong>Shipping ETA</strong><span>Used 28x</span></div>
+                <div><strong>Backorder Notice</strong><span>Used 19x</span></div>
+                <div><strong>Invoice Update</strong><span>Used 12x</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="settings">
+          <div class="cd-subgrid">
+            <div class="cd-card cd-form">
+              <h4>Profile</h4>
+              <label>Name</label>
+              <input type="text" value="Ariana Ashford" />
+              <label>Email</label>
+              <input type="email" value="ariana@boutiqueyarn.com" />
+              <label>Plan</label>
+              <select>
+                <option>Enterprise</option>
+                <option>Studio</option>
+              </select>
+              <div class="cd-toggle">
+                <input type="checkbox" checked />
+                <span>Enable priority notifications</span>
+              </div>
+              <div class="cd-toggle">
+                <input type="checkbox" />
+                <span>Auto-generate monthly reports</span>
+              </div>
+            </div>
+            <div class="cd-card cd-metric">
+              <h4>Team Access</h4>
+              <div class="cd-list-compact">
+                <div><strong>Aria Lane</strong><span>Admin</span></div>
+                <div><strong>Jules Porter</strong><span>Ops</span></div>
+                <div><strong>Wren Hale</strong><span>Finance</span></div>
+              </div>
+            </div>
+            <div class="cd-card cd-chart">
+              <div class="cd-card-head">
+                <h4>Usage Overview</h4>
+                <span>Feature adoption</span>
+              </div>
+              <svg viewBox="0 0 320 160" aria-hidden="true">
+                <rect x="20" y="90" width="26" height="50" rx="6" fill="#22b7b1" />
+                <rect x="60" y="70" width="26" height="70" rx="6" fill="#6d7cff" />
+                <rect x="100" y="50" width="26" height="90" rx="6" fill="#b08a4f" />
+                <rect x="140" y="80" width="26" height="60" rx="6" fill="#22b7b1" />
+                <rect x="180" y="40" width="26" height="100" rx="6" fill="#6d7cff" />
+                <rect x="220" y="60" width="26" height="80" rx="6" fill="#b08a4f" />
+              </svg>
+              <div class="cd-legend">
+                <span><i class="fa-solid fa-circle"></i> Reports</span>
+                <span><i class="fa-solid fa-circle"></i> Automations</span>
+                <span><i class="fa-solid fa-circle"></i> Exports</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+

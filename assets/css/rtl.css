@@ -1,0 +1,31 @@
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .notification-panel {
+  right: auto;
+  left: 64px;
+}
+
+[dir="rtl"] .dropdown {
+  right: auto;
+  left: 0;
+}
+
+/* =========================
+   CLIENT DASHBOARD RTL
+========================= */
+
+[dir="rtl"] .client-dashboard .cd-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .client-dashboard .cd-notify,
+[dir="rtl"] .client-dashboard .cd-dropdown {
+  right: auto;
+  left: 32px;
+}
