@@ -120,6 +120,26 @@
     if (event.key === "Escape") closeMobileMenu();
   });
 
+  const passwordToggles = Array.from(document.querySelectorAll("[data-toggle-password]"));
+  if (passwordToggles.length) {
+    passwordToggles.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        if (!targetId) return;
+        const input = document.getElementById(targetId);
+        if (!input) return;
+        const isHidden = input.type === "password";
+        input.type = isHidden ? "text" : "password";
+        const icon = button.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-eye", !isHidden);
+          icon.classList.toggle("fa-eye-slash", isHidden);
+        }
+        button.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
+      });
+    });
+  }
+
   const dropdowns = document.querySelectorAll("[data-dropdown]");
   if (dropdowns.length) {
     dropdowns.forEach((dropdown) => {
@@ -216,5 +236,27 @@
       if (qtyInput.value.trim() === "") return;
       setQty(parseQty());
     });
+  }
+
+  const revealTargets = Array.from(
+    document.querySelectorAll(
+      "section, .product-card, .pattern-card, .why-card, .testimonial-card-premium, .blog-card, .blog-featured-card, .card, .c-option-card, .faq-item"
+    )
+  );
+
+  if (revealTargets.length) {
+    revealTargets.forEach((el) => el.classList.add("reveal"));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealTargets.forEach((el) => observer.observe(el));
   }
 })();

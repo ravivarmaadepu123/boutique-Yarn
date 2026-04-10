@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
     <title>Boutique Yarn - Premium Craft Supplies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/dark-mode.css" />
     <link rel="stylesheet" href="../assets/css/rtl.css" />
@@ -14,12 +14,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
-  <body class="blog-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
+  <body class="blog-page product-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mt-4 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
-          <nav class="flex h-16 items-center justify-between gap-4 px-4 sm:px-6" aria-label="Main">
-            <div class="flex items-center gap-8 rtl-reverse">
+          <nav class="flex h-16 items-center gap-4 px-4 sm:px-6" aria-label="Main">
+            <div class="flex min-w-0 flex-1 items-center gap-6 rtl-reverse">
               <a href="index.html" class="flex items-center gap-3 rounded-xl px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
@@ -33,7 +33,7 @@
                 </div>
               </a>
 
-              <div class="hidden items-center gap-1 lg:flex">
+              <div class="hidden flex-1 items-center justify-center gap-1 lg:flex">
                 <div class="relative" data-dropdown>
                   <button class="nav-link group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu" data-dropdown-trigger>
                     <span>Home</span>
@@ -59,10 +59,6 @@
                   Blog
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
                 </a>
-                <a href="pricing page.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
-                  Pricing
-                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
-                </a>
                 <a href="contact.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                   Contact
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
@@ -82,14 +78,10 @@
               </div>
             </div>
 
-            <div class="hidden items-center gap-3 lg:flex">
+            <div class="hidden flex-shrink-0 items-center gap-3 md:flex">
               <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
-                <svg class="h-5 w-5 transition-transform duration-200 group-hover:rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-sun>
-                  <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.9a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.1a1 1 0 0 1 1-1ZM5.1 5.1a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4Zm12.6 12.6a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4ZM4 12a1 1 0 0 1 1-1h1.1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1Zm12.9 0a1 1 0 0 1 1-1H19a1 1 0 1 1 0 2h-1.1a1 1 0 0 1-1-1ZM5.1 18.9a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0Zm12.6-12.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
-                </svg>
-                <svg class="hidden h-5 w-5 transition-transform duration-200 group-hover:-rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-moon>
-                  <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" />
-                </svg>
+                <span class="theme-icon icon-sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+                <span class="theme-icon icon-moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
               </button>
 
               <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
@@ -141,7 +133,6 @@
             <a href="about.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">About Us</a>
             <a href="products.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Products</a>
             <a href="blog.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Blog</a>
-            <a href="pricing page.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Pricing</a>
             <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="dashboards">
               Dashboards
               <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
@@ -166,24 +157,35 @@
 
     <!-- PRODUCT HERO START -->
 <section class="product-hero">
+  <div class="container">
+    <div class="section-header product-hero-header">
+      <span class="eyebrow">Signature Collection</span>
+      <h2 class="section-title">Premium Yarn Kit</h2>
+      <p class="section-subtitle">Studio-curated fibers, artisan textures, and a refined color story crafted for modern makers.</p>
+    </div>
+  </div>
+
   <div class="container product-grid">
 
     <!-- LEFT: IMAGE GALLERY -->
     <div class="product-gallery">
       <div class="main-image">
-        <img id="mainImage" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800" alt="Product">
+        <img id="mainImage" src="../assets/images/yarn-03.jpg" alt="Product">
       </div>
 
       <div class="thumbnails">
-        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=200" onclick="changeImage(this)">
-        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=200" onclick="changeImage(this)">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=200" onclick="changeImage(this)">
-        <img src="https://images.pexels.com/photos/19496818/pexels-photo-19496818.jpeg" onclick="changeImage(this)">
+        <img src="../assets/images/yarn-03.jpg" onclick="changeImage(this)">
+        <img src="../assets/images/yarn-10.jpg" onclick="changeImage(this)">
+        <img src="../assets/images/yarn-12.jpg" onclick="changeImage(this)">
+        <img src="../assets/images/yarn-02.jpg" onclick="changeImage(this)">
       </div>
     </div>
 
     <!-- RIGHT: PRODUCT DETAILS -->
     <div class="product-info">
+      <div class="product-tags">
+        <span class="tag">Limited Batch</span>
+      </div>
 
       <h1>Premium Handmade Yarn Kit</h1>
 
@@ -232,7 +234,14 @@
 <!-- PRODUCT HERO END -->
 <!-- PREMIUM BENEFITS SECTION -->
 <section class="benefits premium-box">
-  <div class="container benefits-row">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why You’ll Love It</span>
+      <h2 class="section-title">Designed For Premium Crafting</h2>
+      <p class="section-subtitle">Every kit is refined for quality, comfort, and long-lasting color.</p>
+    </div>
+
+    <div class="benefits-row">
 
     <div class="benefit-card">
       <div class="icon"><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i></div>
@@ -258,11 +267,19 @@
       <p>Quick shipping with secure packaging.</p>
     </div>
 
+    </div>
   </div>
 </section>
 <!-- PRODUCT DESCRIPTION START -->
 <section class="product-desc">
-  <div class="container desc-grid">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Craft Details</span>
+      <h2 class="section-title">Made To Feel Exceptional</h2>
+      <p class="section-subtitle">Premium fibers, mindful sourcing, and detailed care guidance.</p>
+    </div>
+
+    <div class="desc-grid">
 
     <!-- LEFT: TEXT -->
     <div class="desc-content">
@@ -309,36 +326,45 @@
 
     <!-- RIGHT: IMAGE -->
     <div class="desc-image">
-      <img src="https://images.pexels.com/photos/6190995/pexels-photo-6190995.jpeg" alt="Product Detail">
+      <img src="../assets/images/yarn-15.jpg" alt="Product Detail">
     </div>
 
+    </div>
   </div>
 </section>
 <!-- PRODUCT DESCRIPTION END -->
  <!-- PRODUCT GALLERY START -->
 <section class="product-gallery-section">
-  <div class="gallery-grid">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Studio Gallery</span>
+      <h2 class="section-title">Every Angle, Every Texture</h2>
+      <p class="section-subtitle">Explore the color depth, stitch definition, and soft drape.</p>
+    </div>
+
+    <div class="gallery-grid">
 
     <!-- IMAGE 1 -->
     <div class="gallery-item large">
-      <img src="https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg" alt="Gallery Image">
+      <img src="../assets/images/yarn-09.jpg" alt="Gallery Image">
     </div>
 
     <!-- IMAGE 2 -->
     <div class="gallery-item">
-      <img src="https://images.pexels.com/photos/10623101/pexels-photo-10623101.jpeg" alt="Gallery Image">
+      <img src="../assets/images/yarn-01.jpg" alt="Gallery Image">
     </div>
 
     <!-- IMAGE 3 -->
     <div class="gallery-item">
-      <img src="https://images.pexels.com/photos/6634619/pexels-photo-6634619.jpeg" alt="Gallery Image">
+      <img src="../assets/images/yarn-19.jpg" alt="Gallery Image">
     </div>
 
     <!-- IMAGE 4 -->
     <div class="gallery-item wide">
-      <img src="https://images.pexels.com/photos/5660371/pexels-photo-5660371.jpeg" alt="Gallery Image">
+      <img src="../assets/images/yarn-13.jpg" alt="Gallery Image">
     </div>
 
+    </div>
   </div>
 </section>
 <!-- PRODUCT GALLERY END -->
@@ -346,14 +372,18 @@
 <section class="related-products">
   <div class="container">
 
-    <h2 class="section-title">You May Also Like</h2>
+    <div class="section-header">
+      <span class="eyebrow">Complete The Set</span>
+      <h2 class="section-title">You May Also Like</h2>
+      <p class="section-subtitle">Curated tools and fibers chosen to pair beautifully.</p>
+    </div>
 
     <div class="products-grid">
 
       <!-- PRODUCT 1 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://images.pexels.com/photos/3693232/pexels-photo-3693232.jpeg" alt="Product">
+          <img src="../assets/images/yarn-07.jpg" alt="Product">
         </div>
         <h4>Soft Cotton Yarn</h4>
         <p class="price">$24.00</p>
@@ -363,7 +393,7 @@
       <!-- PRODUCT 2 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://images.pexels.com/photos/8476672/pexels-photo-8476672.jpeg" alt="Product">
+          <img src="../assets/images/yarn-20.jpg" alt="Product">
         </div>
         <h4>Knitting Starter Kit</h4>
         <p class="price">$49.00</p>
@@ -373,7 +403,7 @@
       <!-- PRODUCT 3 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://images.pexels.com/photos/3639038/pexels-photo-3639038.jpeg" alt="Product">
+          <img src="../assets/images/yarn-06.jpg" alt="Product">
         </div>
         <h4>Crochet Hooks Set</h4>
         <p class="price">$19.00</p>
@@ -383,10 +413,50 @@
       <!-- PRODUCT 4 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://images.pexels.com/photos/5709751/pexels-photo-5709751.jpeg" alt="Product">
+          <img src="../assets/images/yarn-14.jpg" alt="Product">
         </div>
         <h4>Premium Wool Bundle</h4>
         <p class="price">$35.00</p>
+        <button class="btn-cart">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="../assets/images/yarn-11.jpg" alt="Product">
+        </div>
+        <h4>Textured Linen Yarn</h4>
+        <p class="price">$27.00</p>
+        <button class="btn-cart">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 6 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="../assets/images/yarn-12.jpg" alt="Product">
+        </div>
+        <h4>Beginner Atelier Kit</h4>
+        <p class="price">$39.00</p>
+        <button class="btn-cart">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="../assets/images/yarn-03.jpg" alt="Product">
+        </div>
+        <h4>Merino Core Skeins</h4>
+        <p class="price">$29.00</p>
+        <button class="btn-cart">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 8 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="../assets/images/yarn-18.jpg" alt="Product">
+        </div>
+        <h4>Cozy Knit Bundle</h4>
+        <p class="price">$44.00</p>
         <button class="btn-cart">Add to Cart</button>
       </div>
 
@@ -398,6 +468,11 @@
 <!-- TRUST SECTION START -->
 <section class="trust-section">
   <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Studio Promise</span>
+      <h2 class="section-title">Craft With Confidence</h2>
+      <p class="section-subtitle">Thoughtful service and secure checkout for every order.</p>
+    </div>
 
     <div class="trust-wrapper">
 
@@ -437,7 +512,11 @@
 <section class="faq-section">
   <div class="container">
 
-    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="section-header">
+      <span class="eyebrow">Need Help?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Quick answers to help you shop with clarity.</p>
+    </div>
 
     <div class="faq-wrapper">
 
@@ -448,7 +527,7 @@
           <span class="icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
         </button>
         <div class="faq-answer">
-          <p>Shipping typically takes 3–7 business days depending on your location.</p>
+          <p>Shipping typically takes 3-7 business days depending on your location.</p>
         </div>
       </div>
 
@@ -515,11 +594,13 @@
           </div>
 
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Company</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Menu</p>
             <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="index.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 1</a></li>
+              <li><a href="home page2.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 2</a></li>
               <li><a href="about.html" class="transition hover:text-[color:rgb(var(--accent))]">About Us</a></li>
-              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Studio Journal</a></li>
-              <li><a href="pricing page.html" class="transition hover:text-[color:rgb(var(--accent))]">Membership</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Products</a></li>
+              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Blog</a></li>
               <li><a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Contact</a></li>
             </ul>
           </div>
@@ -564,6 +645,18 @@
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

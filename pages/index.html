@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
     <title>Boutique Yarn - Premium Craft Supplies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/dark-mode.css" />
     <link rel="stylesheet" href="../assets/css/rtl.css" />
@@ -17,9 +17,9 @@
   <body class="blog-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mt-4 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
-          <nav class="flex h-16 items-center justify-between gap-4 px-4 sm:px-6" aria-label="Main">
-            <div class="flex items-center gap-8 rtl-reverse">
+        <div class="mt-4 rounded-2xl bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
+          <nav class="flex h-16 items-center gap-4 px-4 sm:px-6" aria-label="Main">
+            <div class="flex min-w-0 flex-1 items-center gap-6 rtl-reverse">
               <a href="index.html" class="flex items-center gap-3 rounded-xl px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
@@ -32,7 +32,7 @@
                 </div>
               </a>
 
-              <div class="hidden items-center gap-1 lg:flex">
+              <div class="hidden flex-1 items-center justify-center gap-1 lg:flex">
                 <div class="relative" data-dropdown>
                   <button class="nav-link group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu" data-dropdown-trigger>
                     <span>Home</span>
@@ -58,10 +58,6 @@
                   Blog
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
                 </a>
-                <a href="pricing page.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
-                  Pricing
-                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
-                </a>
                 <a href="contact.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                   Contact
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
@@ -81,22 +77,18 @@
               </div>
             </div>
 
-            <div class="hidden items-center gap-3 lg:flex">
-              <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
-                <svg class="h-5 w-5 transition-transform duration-200 group-hover:rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-sun>
-                  <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.9a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.1a1 1 0 0 1 1-1ZM5.1 5.1a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4Zm12.6 12.6a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4ZM4 12a1 1 0 0 1 1-1h1.1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1Zm12.9 0a1 1 0 0 1 1-1H19a1 1 0 1 1 0 2h-1.1a1 1 0 0 1-1-1ZM5.1 18.9a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0Zm12.6-12.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
-                </svg>
-                <svg class="hidden h-5 w-5 transition-transform duration-200 group-hover:-rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-moon>
-                  <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" />
-                </svg>
+            <div class="hidden flex-shrink-0 items-center gap-3 md:flex">
+              <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
+                <span class="theme-icon icon-sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+                <span class="theme-icon icon-moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
               </button>
 
-              <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
+              <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
                 RTL
                 <span class="h-1.5 w-1.5 rounded-full bg-[color:rgb(var(--accent))]"></span>
               </button>
 
-              <a href="products.html" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="View cart">
+              <a href="products.html" class="group relative flex h-10 w-10 items-center justify-center rounded-full bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="View cart">
                 <svg class="h-5 w-5 transition-transform duration-200 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M7 6h14l-2 8H8L6 4H3V2h4l1 4Zm2 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" />
                 </svg>
@@ -106,7 +98,7 @@
               <a href="login.html" class="rounded-full bg-[color:rgb(var(--accent))] px-5 py-2 text-sm font-semibold text-white shadow-[0_15px_35px_-20px_rgba(236,72,153,0.8)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-22px_rgba(236,72,153,0.9)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[color:rgb(var(--accent))]">Login</a>
             </div>
 
-            <button id="mobile-toggle" class="flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))] lg:hidden" aria-label="Open menu" aria-expanded="false">
+            <button id="mobile-toggle" class="flex h-10 w-10 items-center justify-center rounded-full bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))] lg:hidden" aria-label="Open menu" aria-expanded="false">
               <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor" d="M4 7h16v2H4V7Zm0 6h16v2H4v-2Zm0 6h16v2H4v-2Z" />
               </svg>
@@ -119,7 +111,7 @@
         <div class="absolute right-0 top-0 h-full w-80 max-w-[85%] translate-x-full overflow-y-auto bg-[color:rgb(var(--page-bg))] p-6 pb-10 shadow-2xl transition-transform duration-300">
           <div class="flex items-center justify-between">
             <span class="text-sm font-semibold text-[color:rgb(var(--muted))]">Menu</span>
-            <button id="mobile-close" class="flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)]" aria-label="Close menu">
+            <button id="mobile-close" class="flex h-10 w-10 items-center justify-center rounded-full" aria-label="Close menu">
               <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4 6.4 5Z" />
               </svg>
@@ -140,7 +132,6 @@
             <a href="about.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">About Us</a>
             <a href="products.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Products</a>
             <a href="blog.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Blog</a>
-            <a href="pricing page.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Pricing</a>
             <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="dashboards">
               Dashboards
               <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
@@ -164,134 +155,153 @@
     </header>
 
     <main class="pt-32">
-      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div class="rounded-3xl border border-[color:rgb(var(--border)/0.14)] bg-gradient-to-br from-[color:rgb(var(--accent)/0.1)] via-[color:rgb(var(--page-bg))] to-[color:rgb(var(--accent)/0.05)] p-8 sm:p-10">
-            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-[color:rgb(var(--muted))]">Boutique Yarn Studio</p>
-            <h1 class="mt-5 text-4xl font-semibold tracking-tight text-[color:rgb(var(--text))] sm:text-5xl lg:text-6xl">
-              Premium yarns, tools, and patterns for modern makers.
-            </h1>
-            <p class="mt-5 max-w-xl text-base text-[color:rgb(var(--muted))] sm:text-lg">
-              Curated fibers, boutique dye lots, and heirloom tools. Build your personal library, track orders, and save inspiration in one elegant studio.
+      <section class="hero-luxe">
+        <div class="hero-luxe-shell">
+          <div class="hero-luxe-copy">
+            <p class="hero-luxe-tag">Atelier-grade fibers · Small-batch dyes · Heirloom tools</p>
+            <h1>Design-led yarns for modern makers.</h1>
+            <p>
+              Boutique Yarn curates tactile, studio-quality materials and patterns that elevate every stitch.
+              Discover limited palettes, archival textures, and tools made to be kept.
             </p>
-            <div class="mt-8 flex flex-wrap items-center gap-4">
+            <div class="hero-luxe-actions">
               <a href="products.html" class="btn btn-primary">Shop the Collection</a>
-              <a href="pricing page.html" class="btn btn-outline">View Membership</a>
+              <a href="blog.html" class="btn btn-outline">Explore Patterns</a>
             </div>
-            <div class="mt-8 flex flex-wrap items-center gap-6 text-sm text-[color:rgb(var(--muted))]">
-              <div class="flex items-center gap-3 rounded-full border border-[color:rgb(var(--border)/0.2)] px-4 py-2">
-                <span class="h-2.5 w-2.5 rounded-full bg-[color:rgb(var(--accent))]"></span>
-                120+ artisan yarns
+            <div class="hero-luxe-metrics">
+              <div>
+                <span>120+</span>
+                <small>Curated yarns</small>
               </div>
-              <div class="flex items-center gap-3 rounded-full border border-[color:rgb(var(--border)/0.2)] px-4 py-2">
-                <span class="h-2.5 w-2.5 rounded-full bg-[color:rgb(var(--accent))]"></span>
-                Free weekly patterns
+              <div>
+                <span>4.9</span>
+                <small>Studio rating</small>
+              </div>
+              <div>
+                <span>10k+</span>
+                <small>Creators</small>
               </div>
             </div>
           </div>
 
-          <div class="grid gap-6 sm:grid-cols-2 lg:items-start">
-            <div class="group overflow-hidden rounded-3xl border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.7)] shadow-[0_24px_60px_-40px_rgba(15,23,42,0.45)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-44px_rgba(15,23,42,0.55)]">
-              <img src="https://images.pexels.com/photos/4006490/pexels-photo-4006490.jpeg" alt="Soft yarn bundles in neutral tones" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-60" />
-              <div class="p-5">
-                <p class="text-sm font-semibold">Signature Yarn Library</p>
-                <p class="mt-2 text-sm text-[color:rgb(var(--muted))]">Seasonal palettes curated by expert dyers.</p>
+          <div class="hero-luxe-media">
+            <div class="hero-luxe-frame">
+              <img src="../assets/images/yarn-08.jpg" alt="Soft yarn bundles in neutral tones">
+              <div class="hero-luxe-overlay">
+                <span>Limited Dye Lot</span>
+                <strong>Spring Atelier</strong>
               </div>
             </div>
-            <div class="group overflow-hidden rounded-3xl border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.7)] shadow-[0_24px_60px_-40px_rgba(15,23,42,0.45)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-44px_rgba(15,23,42,0.55)] lg:translate-y-6">
-              <img src="https://media.istockphoto.com/id/1351309771/vector/sewing-related-cartoon-style-doodle-vector-illustration.jpg?s=612x612&w=0&k=20&c=vwsolzv6YfVl2UJexr1BZnqVt9I73sLsoj6Q-9TDbek=" alt="Craft tools and knitting needles" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-60" />
-              <div class="p-5">
-                <p class="text-sm font-semibold">Tools That Last</p>
-                <p class="mt-2 text-sm text-[color:rgb(var(--muted))]">Hand-finished needles, hooks, and accessories.</p>
+            <div class="hero-luxe-stack">
+              <div class="hero-luxe-card">
+                <img src="../assets/images/yarn-16.jpg" alt="Craft tools and knitting needles">
+                <div>
+                  <p>Heirloom Tools</p>
+                  <span>Hand-finished sets</span>
+                </div>
               </div>
-            </div>
-            <div class="group overflow-hidden rounded-3xl border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.7)] shadow-[0_24px_60px_-40px_rgba(15,23,42,0.45)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-44px_rgba(15,23,42,0.55)] sm:col-span-2">
-              <img src="https://images.pexels.com/photos/6461479/pexels-photo-6461479.jpeg" alt="Cozy knit pattern book on a table" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-64" />
-              <div class="p-5">
-                <p class="text-sm font-semibold">Pattern Studio</p>
-                <p class="mt-2 text-sm text-[color:rgb(var(--muted))]">Save favorites, follow tutorials, and track your progress.</p>
+              <div class="hero-luxe-card">
+                <img src="../assets/images/yarn-03.jpg" alt="Pattern book with yarn">
+                <div>
+                  <p>Pattern Studio</p>
+                  <span>Weekly new releases</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
  <!-- FEATURED PRODUCTS START -->
-<section class="products">
-  <div class="container">
-
-    <h2 class="section-title">Featured Products</h2>
-
-    <div class="products-grid">
-
-      <!-- PRODUCT 1 -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="https://images.pexels.com/photos/24880080/pexels-photo-24880080.jpeg" alt="Yarn">
-          <span class="wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
-
-          <div class="product-overlay">
-            <a href="#" class="btn-cart">Add to Cart</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>Soft Wool Yarn</h3>
-          <p>$24.00</p>
-        </div>
+<section class="featured-premium">
+  <div class="fp-shell">
+    <div class="fp-header">
+      <div>
+        <p class="fp-eyebrow">Featured Collection</p>
+        <h2 class="section-title">Atelier Picks</h2>
+        <p class="fp-subtitle">Editorial bundles, limited dye lots, and studio tools curated for modern makers.</p>
       </div>
-
-      <!-- PRODUCT 2 -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="https://images.pexels.com/photos/4792081/pexels-photo-4792081.jpeg" alt="Tools">
-          <span class="wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
-
-          <div class="product-overlay">
-            <a href="#" class="btn-cart">Add to Cart</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>Crochet Hook Set</h3>
-          <p>$18.00</p>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="https://images.pexels.com/photos/5660291/pexels-photo-5660291.jpeg" alt="Kit">
-          <span class="wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
-
-          <div class="product-overlay">
-            <a href="#" class="btn-cart">Add to Cart</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>Beginner Knit Kit</h3>
-          <p>$39.00</p>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="https://images.pexels.com/photos/5486776/pexels-photo-5486776.jpeg" alt="Accessories">
-          <span class="wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
-
-          <div class="product-overlay">
-            <a href="#" class="btn-cart">Add to Cart</a>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>Craft Accessories Pack</h3>
-          <p>$15.00</p>
-        </div>
-      </div>
-
+      <a class="fp-link" href="products.html">View all products</a>
     </div>
 
+    <div class="fp-grid">
+      <article class="fp-hero">
+        <img src="../assets/images/yarn-20.jpg" alt="Merino yarn bundles in neutral tones">
+        <div class="fp-hero-body">
+          <span class="fp-pill">Limited Drop</span>
+          <h3>Maison Merino Set</h3>
+          <p>Six skeins in soft neutrals, hand-dyed for heirloom texture and drape.</p>
+          <div class="fp-meta">
+            <span>$68.00</span>
+            <button class="fp-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="fp-cards">
+        <article class="fp-card">
+          <img src="../assets/images/yarn-14.jpg" alt="Chunky wool yarn">
+          <div>
+            <p>Chunky Alpaca</p>
+            <span>Warm ivory, 4 skeins</span>
+            <strong>$42.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="fp-card">
+          <img src="../assets/images/yarn-09.jpg" alt="Crochet tool kit">
+          <div>
+            <p>Studio Hook Set</p>
+            <span>Polished metal, 12 pcs</span>
+            <strong>$28.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="fp-card">
+          <img src="../assets/images/yarn-06.jpg" alt="Pattern swatches with yarn">
+          <div>
+            <p>Pattern Swatch Kit</p>
+            <span>Texture-ready samples</span>
+            <strong>$22.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="fp-card">
+          <img src="../assets/images/yarn-12.jpg" alt="Knitting starter kit">
+          <div>
+            <p>Beginner Atelier Kit</p>
+            <span>Everything to start</span>
+            <strong>$39.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="fp-card">
+          <img src="../assets/images/yarn-07.jpg" alt="Silk blend yarn">
+          <div>
+            <p>Silk Blend Skeins</p>
+            <span>Gloss finish, 3 skeins</span>
+            <strong>$36.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="fp-card">
+          <img src="../assets/images/yarn-15.jpg" alt="Needle organizer roll">
+          <div>
+            <p>Needle Roll Case</p>
+            <span>Canvas organizer</span>
+            <strong>$26.00</strong>
+            <button class="fp-mini-btn">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
-  </section>
+</section>
   <!-- FEATURED PRODUCTS END -->
 
   <!-- PATTERN LIBRARY START -->
@@ -314,7 +324,7 @@
       <div class="pattern-grid">
         <article class="pattern-card" data-category="beginner knitting">
           <div class="pattern-image">
-            <img src="https://slimages.macysassets.com/is/image/MCY/products/1/optimized/15509381_fpx.tif?op_sharpen=1&wid=1500&fit=fit%2C1&fmt=webp" alt="Cloudline scarf pattern preview">
+            <img src="../assets/images/pattern-cloudline-scarf.jpg" alt="Cloudline scarf pattern preview">
             <span class="pattern-badge">Beginner</span>
           </div>
           <div class="pattern-info">
@@ -330,7 +340,7 @@
 
         <article class="pattern-card" data-category="crochet">
           <div class="pattern-image">
-            <img src="https://images.pexels.com/photos/27100518/pexels-photo-27100518.jpeg" alt="Crochet tote pattern preview">
+            <img src="../assets/images/pattern-market-tote.jpg" alt="Crochet tote pattern preview">
             <span class="pattern-badge">Crochet</span>
           </div>
           <div class="pattern-info">
@@ -346,7 +356,7 @@
 
         <article class="pattern-card" data-category="knitting">
           <div class="pattern-image">
-            <img src="https://images.pexels.com/photos/27471120/pexels-photo-27471120.jpeg" alt="Heirloom throw pattern preview">
+            <img src="../assets/images/yarn-14.jpg" alt="Chunky knit throw pattern preview">
             <span class="pattern-badge">Knitting</span>
           </div>
           <div class="pattern-info">
@@ -362,7 +372,7 @@
 
         <article class="pattern-card" data-category="beginner crochet">
           <div class="pattern-image">
-            <img src="https://atrangistudio.com/cdn/shop/files/Atrangi_Studio_Blue_Pottery_Coaster_1.png?v=1722945954&width=2048" alt="Beginner crochet coasters pattern preview">
+            <img src="../assets/images/pattern-studio-coasters.jpg" alt="Beginner crochet coasters pattern preview">
             <span class="pattern-badge">Beginner</span>
           </div>
           <div class="pattern-info">
@@ -378,7 +388,7 @@
 
         <article class="pattern-card" data-category="knitting">
           <div class="pattern-image">
-            <img src="https://bakhli.shop/cdn/shop/files/Magenta_and_Grey.jpg?v=1739434151&width=1946" alt="Ribbed beanie knitting pattern preview">
+            <img src="../assets/images/yarn-18.jpg" alt="Ribbed beanie knitting pattern preview">
             <span class="pattern-badge">Knitting</span>
           </div>
           <div class="pattern-info">
@@ -394,7 +404,7 @@
 
         <article class="pattern-card" data-category="crochet">
           <div class="pattern-image">
-            <img src="https://www.knitting-and.com/wp-content/uploads/2014/05/basket.jpg" alt="Crochet basket pattern preview">
+            <img src="../assets/images/yarn-17.jpg" alt="Crochet basket pattern preview">
             <span class="pattern-badge">Crochet</span>
           </div>
           <div class="pattern-info">
@@ -470,7 +480,7 @@
       </div>
       <div class="testimonials-grid">
         <article class="testimonial-card-premium">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer Emma R.">
+          <img src="../assets/images/portrait-03.jpg" alt="Customer Emma R.">
           <h3>Emma R.</h3>
           <div class="testimonial-stars" aria-label="Rated 5 out of 5">
             <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -479,10 +489,10 @@
             <i class="fa-solid fa-star" aria-hidden="true"></i>
             <i class="fa-solid fa-star" aria-hidden="true"></i>
           </div>
-          <p>“The yarn quality is unreal. Every order feels curated and luxurious.”</p>
+          <p>"The yarn quality is unreal. Every order feels curated and luxurious."</p>
         </article>
         <article class="testimonial-card-premium">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer Sophia M.">
+          <img src="../assets/images/portrait-04.jpg" alt="Customer Sophia M.">
           <h3>Sophia M.</h3>
           <div class="testimonial-stars" aria-label="Rated 5 out of 5">
             <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -491,10 +501,10 @@
             <i class="fa-solid fa-star" aria-hidden="true"></i>
             <i class="fa-solid fa-star" aria-hidden="true"></i>
           </div>
-          <p>“Patterns are modern, easy to follow, and the library keeps me organized.”</p>
+          <p>"Patterns are modern, easy to follow, and the library keeps me organized."</p>
         </article>
         <article class="testimonial-card-premium">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer Oliver K.">
+          <img src="../assets/images/portrait-01.jpg" alt="Customer Oliver K.">
           <h3>Oliver K.</h3>
           <div class="testimonial-stars" aria-label="Rated 5 out of 5">
             <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -503,12 +513,60 @@
             <i class="fa-solid fa-star" aria-hidden="true"></i>
             <i class="fa-solid fa-star" aria-hidden="true"></i>
           </div>
-          <p>“Fast shipping, beautiful packaging, and a premium feel from start to finish.”</p>
+          <p>"Fast shipping, beautiful packaging, and a premium feel from start to finish."</p>
         </article>
       </div>
     </div>
   </section>
   <!-- TESTIMONIALS END -->
+
+  <!-- PRICING START -->
+  <section class="pricing-luxe">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Membership</span>
+        <h2 class="section-title">Pricing Built for Modern Studios</h2>
+        <p class="section-subtitle">Choose a plan for curated patterns, premium fibers, and priority support.</p>
+      </div>
+
+      <div class="pricing-luxe-grid">
+        <article class="pricing-luxe-card">
+          <h3>Starter</h3>
+          <p class="pricing-luxe-price">$29<span>/mo</span></p>
+          <ul>
+            <li>Signature pattern library</li>
+            <li>Monthly yarn drops</li>
+            <li>Community support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Start Starter</a>
+        </article>
+
+        <article class="pricing-luxe-card popular">
+          <p class="pricing-luxe-badge">Most Loved</p>
+          <h3>Studio</h3>
+          <p class="pricing-luxe-price">$79<span>/mo</span></p>
+          <ul>
+            <li>Full pattern archive</li>
+            <li>Seasonal kit access</li>
+            <li>Priority creator support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Choose Studio</a>
+        </article>
+
+        <article class="pricing-luxe-card">
+          <h3>Atelier</h3>
+          <p class="pricing-luxe-price">$149<span>/mo</span></p>
+          <ul>
+            <li>Custom pattern briefs</li>
+            <li>Team library seats</li>
+            <li>Dedicated success partner</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Join Atelier</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- PRICING END -->
 
   <!-- BLOG START -->
   <section class="blog-section blog-section-home premium-blog">
@@ -522,20 +580,20 @@
       <div class="blog-row">
         <article class="blog-featured-card">
           <div class="blog-featured-image">
-            <img src="https://images.pexels.com/photos/6634226/pexels-photo-6634226.jpeg" alt="Seasonal yarn palettes on a desk">
+            <img src="../assets/images/yarn-18.jpg" alt="Seasonal yarn palettes on a desk">
             <span class="blog-pill">Featured</span>
           </div>
           <div class="blog-featured-body">
             <span class="blog-tag">Yarn Trends</span>
             <h3>Autumn palettes curated for soft, layered knits</h3>
-            <p>Explore the mood board behind this season’s warm neutrals and rich tonal blends, crafted for elevated wardrobe staples.</p>
+            <p>Explore the mood board behind this season's warm neutrals and rich tonal blends, crafted for elevated wardrobe staples.</p>
             <a href="blog details.html" class="blog-link">Read More</a>
           </div>
         </article>
 
         <article class="blog-card">
           <div class="blog-image">
-            <img src="https://images.pexels.com/photos/6461485/pexels-photo-6461485.jpeg" alt="Pattern book and yarn swatches">
+            <img src="../assets/images/yarn-17.jpg" alt="Pattern book and yarn swatches">
           </div>
           <div class="blog-content">
             <span class="blog-tag">Pattern Guide</span>
@@ -547,11 +605,11 @@
 
         <article class="blog-card">
           <div class="blog-image">
-            <img src="https://media.smallbiztrends.com/2025/11/5uo5a0rP-key-takeaways.jpg" alt="Craft tools arranged neatly">
+            <img src="../assets/images/yarn-11.jpg" alt="Craft tools arranged neatly">
           </div>
           <div class="blog-content">
             <span class="blog-tag">Crafting Tips</span>
-            <h3>How to build a toolkit you’ll love for years</h3>
+            <h3>How to build a toolkit you'll love for years</h3>
             <p>Our essentials list for needles, hooks, and notions that elevate every project.</p>
             <a href="blog details.html" class="blog-link">Read More</a>
           </div>
@@ -598,11 +656,13 @@
           </div>
 
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Company</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Menu</p>
             <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="index.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 1</a></li>
+              <li><a href="home page2.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 2</a></li>
               <li><a href="about.html" class="transition hover:text-[color:rgb(var(--accent))]">About Us</a></li>
-              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Studio Journal</a></li>
-              <li><a href="pricing page.html" class="transition hover:text-[color:rgb(var(--accent))]">Membership</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Products</a></li>
+              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Blog</a></li>
               <li><a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Contact</a></li>
             </ul>
           </div>
@@ -647,6 +707,17 @@
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
     <title>Boutique Yarn - Premium Craft Supplies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/dark-mode.css" />
     <link rel="stylesheet" href="../assets/css/rtl.css" />
@@ -18,8 +18,8 @@
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mt-4 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
-          <nav class="flex h-16 items-center justify-between gap-4 px-4 sm:px-6" aria-label="Main">
-            <div class="flex items-center gap-8 rtl-reverse">
+          <nav class="flex h-16 items-center gap-4 px-4 sm:px-6" aria-label="Main">
+            <div class="flex min-w-0 flex-1 items-center gap-6 rtl-reverse">
               <a href="index.html" class="flex items-center gap-3 rounded-xl px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
@@ -33,7 +33,7 @@
                 </div>
               </a>
 
-              <div class="hidden items-center gap-1 lg:flex">
+              <div class="hidden flex-1 items-center justify-center gap-1 lg:flex">
                 <div class="relative" data-dropdown>
                   <button class="nav-link group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu" data-dropdown-trigger>
                     <span>Home</span>
@@ -59,10 +59,6 @@
                   Blog
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
                 </a>
-                <a href="pricing page.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
-                  Pricing
-                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
-                </a>
                 <a href="contact.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                   Contact
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
@@ -82,14 +78,10 @@
               </div>
             </div>
 
-            <div class="hidden items-center gap-3 lg:flex">
+            <div class="hidden flex-shrink-0 items-center gap-3 md:flex">
               <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
-                <svg class="h-5 w-5 transition-transform duration-200 group-hover:rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-sun>
-                  <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.9a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.1a1 1 0 0 1 1-1ZM5.1 5.1a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4Zm12.6 12.6a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4ZM4 12a1 1 0 0 1 1-1h1.1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1Zm12.9 0a1 1 0 0 1 1-1H19a1 1 0 1 1 0 2h-1.1a1 1 0 0 1-1-1ZM5.1 18.9a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0Zm12.6-12.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
-                </svg>
-                <svg class="hidden h-5 w-5 transition-transform duration-200 group-hover:-rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-moon>
-                  <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" />
-                </svg>
+                <span class="theme-icon icon-sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+                <span class="theme-icon icon-moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
               </button>
 
               <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
@@ -141,7 +133,6 @@
             <a href="about.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">About Us</a>
             <a href="products.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Products</a>
             <a href="blog.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Blog</a>
-            <a href="pricing page.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Pricing</a>
             <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="dashboards">
               Dashboards
               <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
@@ -168,7 +159,7 @@
 
   <!-- BACKGROUND -->
   <div class="hero-bg">
-    <img src="https://picsum.photos/1600/900?random=101" alt="Blog Image">
+    <img src="../assets/images/yarn-18.jpg" alt="Blog Image">
   </div>
 
   <!-- CONTENT CARD -->
@@ -188,7 +179,7 @@
       </p>
 
       <div class="meta">
-        <img src="https://i.pravatar.cc/40?img=12" alt="author">
+        <img src="../assets/images/portrait-03.jpg" alt="author">
         <div>
           <strong>Ravi Varma</strong>
           <span>March 20 <i class="fa-solid fa-circle" aria-hidden="true"></i> 5 min read</span>
@@ -211,11 +202,11 @@
     <div class="blog-featured-grid">
       <article class="blog-featured-card">
         <div class="blog-featured-image">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Crochet starter kit">
+          <img src="../assets/images/yarn-17.jpg" alt="Crochet starter kit">
           <span class="blog-featured-tag">Crochet</span>
         </div>
         <div class="blog-featured-body">
-          <h3>Mastering Crochet: A Beginner’s Guide</h3>
+          <h3>Mastering Crochet: A Beginner's Guide</h3>
           <p>Learn the fundamentals of crochet and start creating beautiful handmade designs today.</p>
           <div class="blog-featured-meta">
             <span>Ravi Varma</span>
@@ -227,7 +218,7 @@
 
       <article class="blog-featured-card">
         <div class="blog-featured-image">
-          <img src="https://images.pexels.com/photos/6163742/pexels-photo-6163742.jpeg" alt="Knitting essentials">
+          <img src="../assets/images/yarn-17.jpg" alt="Knitting essentials">
           <span class="blog-featured-tag">Knitting</span>
         </div>
         <div class="blog-featured-body">
@@ -243,7 +234,7 @@
 
       <article class="blog-featured-card">
         <div class="blog-featured-image">
-          <img src="https://images.pexels.com/photos/4792084/pexels-photo-4792084.jpeg" alt="Craft tools flatlay">
+          <img src="../assets/images/yarn-10.jpg" alt="Craft tools flatlay">
           <span class="blog-featured-tag">Tips</span>
         </div>
         <div class="blog-featured-body">
@@ -276,7 +267,7 @@
     <h5 class="card-title">Popular Articles</h5>
 
     <div class="post-item">
-      <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=200" alt="">
+      <img src="../assets/images/yarn-03.jpg" alt="">
       <div class="post-content">
         <p>Mastering Crochet Basics</p>
         <span>March 20, 2026</span>
@@ -284,7 +275,7 @@
     </div>
 
     <div class="post-item">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200" alt="">
+      <img src="../assets/images/yarn-10.jpg" alt="">
       <div class="post-content">
         <p>Relaxing Knitting Techniques</p>
         <span>March 18, 2026</span>
@@ -292,7 +283,7 @@
     </div>
 
     <div class="post-item">
-      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=200" alt="">
+      <img src="../assets/images/yarn-12.jpg" alt="">
       <div class="post-content">
         <p>Top Tools for Crafters</p>
         <span>March 15, 2026</span>
@@ -333,7 +324,7 @@
     <div class="blog-grid">
 
       <article class="blog-card">
-        <img src="https://images.pexels.com/photos/4792082/pexels-photo-4792082.jpeg" alt="">
+        <img src="../assets/images/yarn-11.jpg" alt="">
         <div class="blog-card-content">
           <span class="blog-category">Crochet</span>
           <h3>10 Crochet Patterns You Must Try</h3>
@@ -342,16 +333,16 @@
       </article>
 
       <article class="blog-card">
-        <img src="https://images.pexels.com/photos/6163742/pexels-photo-6163742.jpeg" alt="">
+        <img src="../assets/images/yarn-17.jpg" alt="">
         <div class="blog-card-content">
           <span class="blog-category">Knitting</span>
           <h3>How Knitting Improves Mental Health</h3>
-          <p>Explore the soothing benefits of knitting and why it’s great for your mind.</p>
+          <p>Explore the soothing benefits of knitting and why it's great for your mind.</p>
         </div>
       </article>
 
       <article class="blog-card">
-        <img src="https://images.pexels.com/photos/6213/woman-hand-pen-girl.jpg" alt="">
+        <img src="../assets/images/yarn-18.jpg" alt="">
         <div class="blog-card-content">
           <span class="blog-category">Tutorial</span>
           <h3>Step-by-Step Yarn Dyeing Tutorial</h3>
@@ -360,7 +351,7 @@
       </article>
 
       <article class="blog-card">
-        <img src="https://images.pexels.com/photos/3951826/pexels-photo-3951826.jpeg" alt="">
+        <img src="../assets/images/yarn-04.jpg" alt="">
         <div class="blog-card-content">
           <span class="blog-category">Tips</span>
           <h3>5 Tips for Storing Your Yarn Properly</h3>
@@ -405,11 +396,13 @@
           </div>
 
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Company</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Menu</p>
             <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="index.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 1</a></li>
+              <li><a href="home page2.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 2</a></li>
               <li><a href="about.html" class="transition hover:text-[color:rgb(var(--accent))]">About Us</a></li>
-              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Studio Journal</a></li>
-              <li><a href="pricing page.html" class="transition hover:text-[color:rgb(var(--accent))]">Membership</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Products</a></li>
+              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Blog</a></li>
               <li><a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Contact</a></li>
             </ul>
           </div>
@@ -454,6 +447,18 @@
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

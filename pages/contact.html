@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
     <title>Boutique Yarn - Premium Craft Supplies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/dark-mode.css" />
     <link rel="stylesheet" href="../assets/css/rtl.css" />
@@ -14,12 +14,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
-  <body class="blog-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
+  <body class="blog-page contact-page min-h-screen bg-[color:rgb(var(--page-bg))] text-[color:rgb(var(--text))] antialiased">
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mt-4 rounded-2xl border border-[color:rgb(var(--border)/0.18)] bg-gradient-to-r from-[color:rgb(var(--glass)/0.78)] via-[color:rgb(var(--glass)/0.6)] to-[color:rgb(var(--glass)/0.78)] shadow-[0_20px_50px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-all duration-300" id="nav-surface">
-          <nav class="flex h-16 items-center justify-between gap-4 px-4 sm:px-6" aria-label="Main">
-            <div class="flex items-center gap-8 rtl-reverse">
+          <nav class="flex h-16 items-center gap-4 px-4 sm:px-6" aria-label="Main">
+            <div class="flex min-w-0 flex-1 items-center gap-6 rtl-reverse">
               <a href="index.html" class="flex items-center gap-3 rounded-xl px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:rgb(var(--accent)/0.12)] text-[color:rgb(var(--accent))]">
                   <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
@@ -33,7 +33,7 @@
                 </div>
               </a>
 
-              <div class="hidden items-center gap-1 lg:flex">
+              <div class="hidden flex-1 items-center justify-center gap-1 lg:flex">
                 <div class="relative" data-dropdown>
                   <button class="nav-link group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition-all duration-200 hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-haspopup="true" aria-expanded="false" aria-controls="home-menu" data-dropdown-trigger>
                     <span>Home</span>
@@ -59,10 +59,6 @@
                   Blog
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
                 </a>
-                <a href="pricing page.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
-                  Pricing
-                  <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
-                </a>
                 <a href="contact.html" class="nav-link group relative rounded-full px-4 py-2 text-sm font-medium text-[color:rgb(var(--text))] transition hover:text-[color:rgb(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]">
                   Contact
                   <span class="absolute -bottom-1 left-4 right-4 h-px origin-left scale-x-0 bg-[color:rgb(var(--accent))] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true"></span>
@@ -82,14 +78,10 @@
               </div>
             </div>
 
-            <div class="hidden items-center gap-3 lg:flex">
+            <div class="hidden flex-shrink-0 items-center gap-3 md:flex">
               <button id="theme-toggle" class="group relative flex h-10 w-10 items-center justify-center rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-label="Toggle dark mode" aria-pressed="false">
-                <svg class="h-5 w-5 transition-transform duration-200 group-hover:rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-sun>
-                  <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1.1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.9a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.1a1 1 0 0 1 1-1ZM5.1 5.1a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4Zm12.6 12.6a1 1 0 0 1 1.4 0l.8.8a1 1 0 1 1-1.4 1.4l-.8-.8a1 1 0 0 1 0-1.4ZM4 12a1 1 0 0 1 1-1h1.1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1Zm12.9 0a1 1 0 0 1 1-1H19a1 1 0 1 1 0 2h-1.1a1 1 0 0 1-1-1ZM5.1 18.9a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0Zm12.6-12.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
-                </svg>
-                <svg class="hidden h-5 w-5 transition-transform duration-200 group-hover:-rotate-12" viewBox="0 0 24 24" aria-hidden="true" data-icon-moon>
-                  <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" />
-                </svg>
+                <span class="theme-icon icon-sun" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+                <span class="theme-icon icon-moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
               </button>
 
               <button id="rtl-toggle" class="flex h-10 items-center gap-2 rounded-full border border-[color:rgb(var(--border)/0.18)] bg-[color:rgb(var(--glass)/0.6)] px-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--text))] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-20px_rgba(15,23,42,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:rgb(var(--accent))]" aria-pressed="false" aria-label="Toggle RTL">
@@ -141,7 +133,6 @@
             <a href="about.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">About Us</a>
             <a href="products.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Products</a>
             <a href="blog.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Blog</a>
-            <a href="pricing page.html" class="block rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-base font-semibold">Pricing</a>
             <button class="flex w-full items-center justify-between rounded-2xl border border-[color:rgb(var(--border)/0.18)] px-4 py-3 text-left text-base font-semibold" data-mobile-dropdown="dashboards">
               Dashboards
               <svg class="h-4 w-4" viewBox="0 0 20 20" aria-hidden="true">
@@ -164,47 +155,85 @@
       </div>
     </header>
 <!-- CONTACT HERO START -->
-<section class="contact-hero">
-  <div class="contact-hero-inner">
+<section class="contact-hero-premium">
+  <div class="container contact-hero-grid">
+    <div class="contact-hero-content">
+      <span class="contact-badge"><i class="fa-solid fa-comments" aria-hidden="true"></i> We're here to help</span>
+      <h1 class="contact-title">Let's Create Something Beautiful Together</h1>
+      <p class="contact-subtext">
+        Whether you have a question, need support, or want to collaborate, our studio team is ready to assist you every step of the way.
+      </p>
+      <div class="contact-hero-actions">
+        <a href="#contact-form" class="btn btn-primary">Start a Conversation</a>
+        <a href="#contact-paths" class="btn btn-outline">Explore Inquiries</a>
+      </div>
+      <div class="contact-hero-meta">
+        <div>
+          <p class="meta-title">Response Time</p>
+          <p class="meta-value">Within 24 Hours</p>
+        </div>
+        <div>
+          <p class="meta-title">Studio Hours</p>
+          <p class="meta-value">Mon–Fri, 9 AM–6 PM</p>
+        </div>
+        <div>
+          <p class="meta-title">Location</p>
+          <p class="meta-value">Hyderabad, India</p>
+        </div>
+      </div>
+    </div>
 
-    <span class="contact-badge"><i class="fa-solid fa-comments" aria-hidden="true"></i> We're here to help</span>
-
-    <h1 class="contact-title">
-      Let’s Create Something Beautiful Together
-    </h1>
-
-    <p class="contact-subtext">
-      Whether you have a question, need support, or want to collaborate — our team is ready to assist you every step of the way.
-    </p>
-
-    <p class="contact-trust">
-      We reply within 24 hours
-    </p>
-
+    <div class="contact-hero-card">
+      <p class="contact-card-label">Studio Concierge</p>
+      <h3>Talk to a Specialist</h3>
+      <p>Share your vision and we’ll curate yarn palettes, tools, and timelines tailored to your project.</p>
+      <ul>
+        <li>Personalized recommendations</li>
+        <li>Dedicated support specialist</li>
+        <li>Priority follow-up within one business day</li>
+      </ul>
+      <a href="#contact-form" class="btn btn-primary">Book a Consultation</a>
+    </div>
   </div>
 </section>
 <!-- CONTACT HERO END -->
+
 <!-- CONTACT FORM START -->
-<section class="c-form-sec">
-  <div class="c-form-container">
+<section class="contact-connect" id="contact-form">
+  <div class="container contact-form-grid">
+    <div class="contact-form-aside">
+      <span class="eyebrow">Contact Studio</span>
+      <h2 class="section-title">Tell Us About Your Project</h2>
+      <p class="section-subtitle">We’ll help you choose patterns, materials, and timelines with care.</p>
+      <div class="contact-info-cards">
+        <div class="contact-info-card">
+          <h4>Email</h4>
+          <p>studio@boutiqueyarn.com</p>
+        </div>
+        <div class="contact-info-card">
+          <h4>Phone</h4>
+          <p>+91 98765 43210</p>
+        </div>
+        <div class="contact-info-card">
+          <h4>Studio Address</h4>
+          <p>123 Creative Street, Hyderabad, India</p>
+        </div>
+      </div>
+    </div>
 
-    <form class="c-form">
-
+    <form class="c-form contact-form-card">
       <h2>Get in Touch</h2>
 
-      <!-- NAME -->
       <div class="c-field">
         <input type="text" required>
         <label>Name</label>
       </div>
 
-      <!-- EMAIL -->
       <div class="c-field">
         <input type="email" required>
         <label>Email</label>
       </div>
 
-      <!-- SUBJECT -->
       <div class="c-field">
         <select required>
           <option value="" disabled selected></option>
@@ -215,70 +244,58 @@
         <label>Subject</label>
       </div>
 
-      <!-- MESSAGE -->
       <div class="c-field">
         <textarea rows="4" required></textarea>
         <label>Message</label>
       </div>
 
-      <!-- FILE UPLOAD -->
       <div class="c-upload">
         <input type="file" id="file">
         <label for="file"><i class="fa-solid fa-paperclip" aria-hidden="true"></i> Attach file (optional)</label>
       </div>
 
-      <!-- BUTTON -->
-      <button type="submit" class="c-btn">
-        Send Message
-      </button>
-
-      <!-- TRUST TEXT -->
-      <p class="c-trust">
-        We usually respond within 24 hours
-      </p>
-
+      <button type="submit" class="c-btn">Send Message</button>
+      <p class="c-trust">We usually respond within 24 hours</p>
     </form>
-
   </div>
 </section>
 <!-- CONTACT FORM END -->
+
 <!-- CONTACT OPTIONS START -->
-<section class="c-options-sec">
-  <div class="c-options-container">
+<section class="contact-paths" id="contact-paths">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Ways to Connect</span>
+      <h2 class="section-title">Choose Your Inquiry</h2>
+      <p class="section-subtitle">Pick the path that matches your needs and we’ll route you to the right team.</p>
+    </div>
 
-    <div class="c-options-grid">
-
-      <!-- SALES -->
+    <div class="contact-paths-grid">
       <div class="c-option-card">
         <div class="c-option-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
         <h3>Sales Inquiry</h3>
-        <p>Looking to purchase or need pricing details? Our sales team is here to help you choose the right plan.</p>
+        <p>Looking to purchase or need plan guidance? Our sales team will craft the right bundle.</p>
       </div>
 
-      <!-- SUPPORT -->
       <div class="c-option-card">
         <div class="c-option-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
         <h3>Customer Support</h3>
-        <p>Need help with your account or facing an issue? Get quick assistance from our support team.</p>
+        <p>Need help with your account or an order? We’ll resolve issues quickly and thoughtfully.</p>
       </div>
 
-      <!-- PARTNERSHIP -->
       <div class="c-option-card">
         <div class="c-option-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
         <h3>Partnership</h3>
-        <p>Interested in collaborating or working together? Let’s build something amazing together.</p>
+        <p>Interested in collaboration? Let’s build a creative partnership together.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 <!-- CONTACT OPTIONS END -->
-<!-- MAP SECTION START -->
-<section class="map-sec">
-  <div class="map-container">
 
-    <!-- MAP -->
+<!-- MAP SECTION START -->
+<section class="contact-locations">
+  <div class="container contact-location-grid">
     <div class="map-box">
       <iframe 
         src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -286,32 +303,37 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-
-    <!-- LOCATION INFO -->
-    <div class="map-info">
+    <div class="location-card">
+      <span class="eyebrow">Visit the Studio</span>
       <h3>Our Office</h3>
-      <p>
-        123 Creative Street, Hyderabad, India <br>
-        Open Mon — Fri, 9:00 AM — 6:00 PM
-      </p>
+      <p>123 Creative Street, Hyderabad, India</p>
+      <div class="location-meta">
+        <div>
+          <p class="meta-title">Open Hours</p>
+          <p class="meta-value">Mon–Fri, 9:00 AM – 6:00 PM</p>
+        </div>
+        <div>
+          <p class="meta-title">Appointments</p>
+          <p class="meta-value">Studio visits by request</p>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline">Book a Visit</a>
     </div>
-
   </div>
 </section>
 <!-- MAP SECTION END -->
-<!-- LIVE CHAT START -->
-<div class="lc-chat-wrap">
 
-  <div class="lc-chat-text">
-    <span>Need quick help?</span>
+<!-- CONTACT CTA START -->
+<section class="contact-cta">
+  <div class="container">
+    <div class="contact-cta-card">
+      <h2>Need quick help?</h2>
+      <p>Chat with our studio team for fast answers and order support.</p>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-comments" aria-hidden="true"></i> Chat with us</a>
+    </div>
   </div>
-
-  <a href="#" class="lc-chat-btn">
-    <i class="fa-solid fa-comments" aria-hidden="true"></i> Chat with us
-  </a>
-
-</div>
-<!-- LIVE CHAT END -->
+</section>
+<!-- CONTACT CTA END -->
 
 <footer class="mt-24 border-t border-[color:rgb(var(--border)/0.2)] bg-[color:rgb(var(--glass)/0.6)]">
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -337,11 +359,13 @@
           </div>
 
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Company</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[color:rgb(var(--muted))]">Menu</p>
             <ul class="mt-4 space-y-3 text-sm">
+              <li><a href="index.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 1</a></li>
+              <li><a href="home page2.html" class="transition hover:text-[color:rgb(var(--accent))]">Home Page 2</a></li>
               <li><a href="about.html" class="transition hover:text-[color:rgb(var(--accent))]">About Us</a></li>
-              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Studio Journal</a></li>
-              <li><a href="pricing page.html" class="transition hover:text-[color:rgb(var(--accent))]">Membership</a></li>
+              <li><a href="products.html" class="transition hover:text-[color:rgb(var(--accent))]">Products</a></li>
+              <li><a href="blog.html" class="transition hover:text-[color:rgb(var(--accent))]">Blog</a></li>
               <li><a href="contact.html" class="transition hover:text-[color:rgb(var(--accent))]">Contact</a></li>
             </ul>
           </div>
@@ -386,6 +410,18 @@
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
