@@ -238,6 +238,26 @@
     });
   }
 
+  const mainImage = document.getElementById("mainImage");
+  const thumbnailImages = Array.from(document.querySelectorAll(".product-gallery .thumbnails img"));
+  if (mainImage && thumbnailImages.length) {
+    const setMainImage = (img) => {
+      if (!img || !img.src) return;
+      mainImage.src = img.src;
+      if (img.alt) mainImage.alt = img.alt;
+      thumbnailImages.forEach((thumb) => thumb.classList.remove("active"));
+      img.classList.add("active");
+    };
+
+    window.changeImage = setMainImage;
+
+    thumbnailImages.forEach((img) => {
+      img.addEventListener("click", () => setMainImage(img));
+    });
+
+    setMainImage(thumbnailImages[0]);
+  }
+
   const revealTargets = Array.from(
     document.querySelectorAll(
       "section, .product-card, .pattern-card, .why-card, .testimonial-card-premium, .blog-card, .blog-featured-card, .card, .c-option-card, .faq-item"

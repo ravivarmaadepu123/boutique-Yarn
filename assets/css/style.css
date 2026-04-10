@@ -109,6 +109,7 @@ span {
 
 .btn-primary:hover {
   background: rgb(var(--button-bg-hover));
+  color: rgb(var(--button-text));
   transform: translateY(-2px);
   box-shadow: 0 22px 48px -26px rgb(var(--accent) / 0.85);
 }
@@ -1195,6 +1196,7 @@ h1 {
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .premium-blog .blog-featured-image {
@@ -1223,6 +1225,9 @@ h1 {
 
 .premium-blog .blog-featured-body {
   padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .premium-blog .blog-featured-body h3 {
@@ -1241,6 +1246,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--section-gap);
+  align-items: stretch;
 }
 
 @media (max-width: 1024px) {
@@ -1562,6 +1568,9 @@ h1 {
   background: #fff;
   box-shadow: 0 18px 45px -35px rgba(15, 23, 42, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .blog-card:hover {
@@ -1578,6 +1587,9 @@ h1 {
 
 .blog-content {
   padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .blog-tag {
@@ -1611,6 +1623,7 @@ h1 {
   color: rgb(var(--heading));
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-top: auto;
 }
 
 .blog-link:hover {
